@@ -1,13 +1,11 @@
 <?php
+require_once 'loginphp/dp.php';
  require_once 'loginphp/connection.php';
 require_once 'loginphp/per.php';
-require_once 'loginphp/dp.php';
 require_once 'loginphp/fun.php';
 require_once 'loginphp/rewards.php';
 require_once 'loginphp/HealthQuotes.php';
 require_once 'loginphp/Analysis.php';
-
-echo session_id();
 ?>
 
 <!DOCTYPE html>
@@ -329,7 +327,7 @@ echo session_id();
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="loginphp/home.php?logout=true" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

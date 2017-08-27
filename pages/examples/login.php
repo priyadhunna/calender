@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <?php
     
+require_once '../../loginphp/connection.php'; 
+require_once '../../loginphp/library.php';
 
-    require_once '../../loginphp/library.php';
     if(chkLogin()){
-        header("Location: ../../loginphp/home.php");
-        echo session_id();
+        header("Location:../../indexfinal1.php");
     }
-echo session_id();
+?>
+<?php
+
+    if(isset($_POST['login'])){
+        $db = $m->helfis;
+        $collection = $db->myhell;
+        $email = $_POST['email'];
+        $upass = $_POST['pass'];
+        $sess  = session_id();
+        $criteria = array("EmailAddress"=> $email);
+        $query = $collection->findOne($criteria);
+        if(empty($query)){
+            echo "Email ID is not registered.";
+            echo "Either <a href='../pages/examples/register.php'>Register</a> with the new Email ID or <a href='../pages/examples/login.php'>Login</a> with an already registered ID";
+        }
+        else{
+            
+                $pass = $query["Password"];
+                if(password_verify($upass,$pass)){
+                    $var = setsession($email);
+       
+                    if($var){
+                   
+                    $arre = array(
+                          "Email"     => $email,
+                          "SessionID" => $sess
+
+                        );                     
+                         $db = $m->helfis;  
+                        $collection = $db->login; 
+                        $collection->insert($arre);
+                    header("Location: ../../indexfinal1.php");
+                    }
+                    else{
+                        echo "Some error";
+                    }
+                }
+                else{
+                    echo "You have entered a wrong password";
+                    echo "<br>";
+                    echo "Either <a href='register'>Register</a> with the new Email ID or <a href='login.php'>Login</a> with an already registered ID";
+                }
+                
+            
+        
+        }
+    }
+    
+
 ?>
 <html>
 <head>
@@ -27,12 +75,6 @@ echo session_id();
   <!-- iCheck -->
   <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
 </head>
 
 <body class="hold-transition login-page">
@@ -44,7 +86,7 @@ echo session_id();
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="../../loginphp/login_action.php" method="post">
+    <form  method="post">
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="email" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -68,15 +110,6 @@ echo session_id();
         <!-- /.col -->
       </div>
     </form>
-
-   <!--  <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-        Google+</a>
-    </div> -->
-    <!-- /.social-auth-links -->
     <br>
     <a href="#">Forgot your password?</a><br><br>
     <a href="register.php" class="text-center">Register a new membership?</a>

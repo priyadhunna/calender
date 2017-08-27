@@ -3,8 +3,6 @@
 <?php
 
 
-  // $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
-  // echo "Connected";
     require_once 'library.php';
     if(chkLogin()){
        echo session_id();
@@ -12,13 +10,13 @@
         // $name = $_SESSION["fname"];
         // echo "Welcome !!!";
         
-        header("Locaton: ../indexfinal1.php");
+        header("Locaton: indexfinal1.php");
     }
     else{
         header("Location: ../pages/examples/login.php");
     }
 
-    if(isset($_POST['logout'])){
+    if(isset($_REQUEST[ 'logout'])){
         
         $var = removeall();
         if($var){
