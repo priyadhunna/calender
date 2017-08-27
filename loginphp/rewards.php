@@ -1,7 +1,6 @@
 <?php require_once 'connection.php'; ?>
 <?php require_once 'library.php'; ?>
-<?php
-       
+<?php    
     try{
          $db = $m->helfis;
          $collection = $db->bookingevents;
