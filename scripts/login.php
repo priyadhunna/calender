@@ -38,7 +38,7 @@ require_once 'library.php';
                          $db = $m->helfis;  
                         $collection = $db->login; 
                         $collection->insert($arre);
-                    header("Location: ../../indexfinal1.php");
+                    header("Location: ../indexfinal1.php");
                     }
                     else{
                         echo "Some error";
