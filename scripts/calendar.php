@@ -1,7 +1,9 @@
 <?php 
   error_reporting(0);
-require_once '../scripts/connection.php'; ?>
-<?php require_once '../scripts/library.php'; ?>
+require_once 'connection.php'; 
+require_once 'library.php'; 
+require_once 'fun.php';
+ ?>
 
 
 
@@ -239,6 +241,7 @@ require_once '../scripts/connection.php'; ?>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
+              <?= getData(session_id()); ?>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
