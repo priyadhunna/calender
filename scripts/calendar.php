@@ -1,10 +1,8 @@
 <?php 
   error_reporting(0);
-require_once 'connection.php'; 
-require_once 'library.php'; 
-require_once 'fun.php';
- ?>
-
+require_once 'connection.php'; ?>
+<?php require_once 'library.php'; ?>
+<?php require_once 'fun.php'; ?>
 
 
 <!DOCTYPE html>
@@ -12,7 +10,7 @@ require_once 'fun.php';
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Calendar</title>
+  <title> Calendar</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -42,7 +40,7 @@ require_once 'fun.php';
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../index2.html" class="logo">
+    <a href="../indexfinal1.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -240,31 +238,41 @@ require_once 'fun.php';
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-              <?= getData(session_id()); ?>
+              <span class="hidden-xs"> <?php 
+
+              echo getData(session_id()); 
+
+              ?> </span>
             </a>
-            <ul class="dropdown-menu">
+             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
+                
+                <big><?php 
+
+              echo getData(session_id()); 
+
+              ?></big>
+                
+                
+                <!-- /.row -->
               </li>
-              <!-- Menu Body -->
-              
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="scripts/home.php?logout=true" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"></a>
           </li>
         </ul>
       </div>
@@ -280,8 +288,14 @@ require_once 'fun.php';
           <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            <big><?php 
+
+              echo getData(session_id()); 
+
+              ?></big>
+              <br>
+              <br>
+          <a href="#"><i class="fa fa-circle text-success"></i> Profile</a>
         </div>
       </div>
       <!-- search form -->
@@ -290,7 +304,7 @@ require_once 'fun.php';
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
-          <a href="../indexfinal.html">
+          <a href="../indexfinal1.php">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -302,7 +316,7 @@ require_once 'fun.php';
        
         
         <li class="active">
-          <a href="calendar.html">
+          <a href="calendar.php">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red"></small>
