@@ -816,7 +816,8 @@ require_once 'scripts/Analysis.php';
       <!-- Main row -->
    
           <!-- /.nav-tabs-custom -->
-          </div>
+
+ </div>
           <div class="row">
            <div class="col-sm-6">
           <!-- Chat box -->
@@ -825,7 +826,8 @@ require_once 'scripts/Analysis.php';
              
 
                <h3 class="modal-title">DIET PLAN</h3>
-             <div class="box-tools pull-right" data-toggle="tooltip" >
+               <hr>
+             <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
                 <div class="btn-group" data-toggle="btn-toggle">
             <button data-toggle="modal" data-target="#myMod2" class="btn btn-primary">Whole Week</button>
           
@@ -834,29 +836,77 @@ require_once 'scripts/Analysis.php';
             
            
             </div>
-            <hr>
-
+          
             <div class="modal" id="myMod2" data-backdrop="static">
   <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-        <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-green">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title"><center>Diet Chart</center></h4></div>
+          <h4 class="modal-title">Diet Chart</h4></div>
           <div class="box-body">
-           <?php  
-                
-               echo $diet;
-
-             ?>
-
-             
+              <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Breakfast</th>
+                  <th>Lunch</th>
+                  <th>Dinner</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Wednesday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Thursday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Friday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Saturday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+                 <tr>
+                  <td>Sunday</td>
+                  <td>Omellete</td>
+                  <td>Dal, Chapati</td>
+                  <td>Dal, Chapati</td>
+                  
+                </tr>
+            
+               </tbody>
+             </table>
            </div>
-           </div>
-           </div>
-
           
 
         <div class="modal-footer">
@@ -869,17 +919,17 @@ require_once 'scripts/Analysis.php';
             <div class="box-body chat" id="diet-box">
               <!-- chat item -->
               <div class="item">
-                <img src="dist/img/Breakfast.jpg" alt="user image" class="online xyz">
+                <img src="icons/break.jpg" height="14" width="15" alt="user image" class="online xyz">
 
                 <p class="message">
-                  <a href="#" class="name">
+                  <a class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 9:00AM</small>
                     
                     
-                    <h5 align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Breakfast</h5>
-                  </a><br><pre>eggs
-cereals
-milk
+                    <h2 align="justify"><i><b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Breakfast</b></i></h2>
+                  </a><br><pre><h4>Eggs
+Cereals
+Milk<h4>
                       </pre>
                       <br><br>
                   
@@ -901,16 +951,15 @@ milk
               <!-- /.item -->
               <!-- chat item -->
                <div class="item">
-                <img src="dist/img/lunch.jpg" alt="user image" class="offline">
+                <img src="icons/lunch.jpg" height="14" width="15" alt="user image" class="offline">
 
                 <p class="message">
-                  <a href="#" class="name">
+                  <a class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:00PM</small>
                     
-                    <h5 align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Lunch</h5>
-                  </a><br><pre>Beans Thoran, Potato Curry & Rice
-Masala bhindi
-Black Channa and Coconut Stew
+                    <h2 align="justify"><i><b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Lunch</b></i></h2>
+                  </a><br><pre><h4>Beans Thoran,Potato Curry & Rice,Masala bhindi
+Black Channa and Coconut Stew</h4>
                       </pre>
                       <br><br>
                   
@@ -921,18 +970,18 @@ Black Channa and Coconut Stew
              <!-- /.item -->
               <!-- chat item -->
              <div class="item">
-                <img src="dist/img/dinner.jpg" alt="user image" class="offline">
+                <img src="icons/dinner.jpg" height="30" width="30"" alt="user image" class="offline">
 
                 <p class="message">
-                  <a href="#" class="name">
+                  <a class="name">
                     <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 9:00PM</small>
                     
 
-                    <h5 align="justify">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Dinner</h5>
-                  </a><br><pre>Grapefruit and Avocado Salad With Seared Salmon
+                    <h2 align="justify"><i><b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Dinner</b></i></h2>
+                  </a><br><pre><h4>Grapefruit and Avocado Salad With Seared Salmon
 Keema Biryani. 
 Dum Paneer Kali Mirch.
-Shahi Egg Curry.</pre><br><br>
+Shahi Egg Curry.</b></pre><br><br>
                   
                   
                   
@@ -956,6 +1005,7 @@ Shahi Egg Curry.</pre><br><br>
 
             <div class="box-header">
             <h3 class="modal-title">CLASSES</h3>
+            <hr>
              <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
                 <div class="btn-group" data-toggle="btn-toggle">
                 <button type="button" class="btn btn-info" onclick="location.href='scripts/calendar.php'">Make Appointment</button>
@@ -963,7 +1013,7 @@ Shahi Egg Curry.</pre><br><br>
               </div>
             </div>
             </div>
-            <hr>
+          
             
         
         <div class="modal-header"  id="class-box">
@@ -976,26 +1026,13 @@ Shahi Egg Curry.</pre><br><br>
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-blue">
-            <?php
- // getData(session_id());
-              try{
-                     $db = $m->helfis;
-                     $collection = $db->bookingevents;
-                     $fname = getname(session_id());
-                     $cursor = $collection->find(array("FirstName"=>$fname));
-                      // print_r($cursor);
-                    foreach($cursor as $document){
-                    
-                     $dataexplode = explode('T',$document['date']);
-                    // print_r($document);
-                    if($dataexplode[0]==date('Y-m-d')){
-              ?>
+       
               <div class="row">
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">TIME</h5>
 
-                    <span class="description-text"> <?= $dataexplode[1] ?></span>
+                    <span class="description-text">11:00AM</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -1003,7 +1040,7 @@ Shahi Egg Curry.</pre><br><br>
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">DATE</h5>
-                    <span class="description-text"><?= $dataexplode[0] ?></span>
+                    <span class="description-text">12/8/2017</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -1011,21 +1048,12 @@ Shahi Egg Curry.</pre><br><br>
                 <div class="col-sm-4">
                   <div class="description-block">
                     <h5 class="description-header">CLASS</h5>
-                    <span class="description-text"><?= $document['class'] ?></span>
+                    <span class="description-text">AEROBICS</span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
               </div>
-                <?php 
-                }
-                }
-                }
-              catch(MongoException $mongoException){
-                  print $mongoException;
-                  exit;
-              }
-              ?>
               <!-- /.row -->
             </div>
           <!-- /.widget-user -->
@@ -1181,32 +1209,15 @@ Shahi Egg Curry.</pre><br><br>
             </div>
           <!-- /.widget-user -->
         </div>
-    
-       
-    
-       
-
-    
-          <!-- /.widget-user -->
+     </div>
         </div>
         </div>
-        </div>
-        
-      
-
-      
-
-
-      </div>
+  </div>
       </div>
     </div>
     </div>
     </div>
      </div>
-    
-    
-
-
     <div class="row">
           <div class="col-md-12 col-md-12">
            <div class="box box-info">
