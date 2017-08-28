@@ -14,7 +14,7 @@ echo "connected!";
 
 $db = $m->selectDB('helfis');
 
- $collection = $db->myhell;
+ $collection = $db->helfis_user_profiles;
  echo "Collection selected successfully";
 
 $email = $_POST['email'];

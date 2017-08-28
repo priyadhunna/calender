@@ -1,4 +1,4 @@
-<?php require_once '../loginphp/connection.php'; ?>
+<?php require_once '../scripts/connection.php'; ?>
      <?php
 
 $data = "<table class=\"table table-hover table-striped\" id=\"mytable\">

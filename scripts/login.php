@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
     
-require_once '../../scripts/connection.php'; 
-require_once '../../scripts/library.php';
+require_once 'connection.php'; 
+require_once 'library.php';
 
     if(chkLogin()){
         header("Location:../../indexfinal1.php");

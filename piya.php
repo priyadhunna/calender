@@ -1,4 +1,4 @@
-﻿<?php require_once '../loginphp/connection.php'; ?>
+﻿<?php require_once '../scripts/connection.php'; ?>
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">

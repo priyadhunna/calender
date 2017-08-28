@@ -432,15 +432,15 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li><a href="scripts/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li><a href="scripts/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li><a href="scripts/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li><a href="scripts/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li><a href="scripts/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li><a href="scripts/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li><a href="scripts/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li><a href="scripts/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href="scripts/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -1046,7 +1046,7 @@
                   </thead>
                   <tbody>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                    <td><a href="scripts/invoice.html">OR9842</a></td>
                     <td>Call of Duty IV</td>
                     <td><span class="label label-success">Shipped</span></td>
                     <td>
@@ -1054,7 +1054,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                    <td><a href="scripts/invoice.html">OR1848</a></td>
                     <td>Samsung Smart TV</td>
                     <td><span class="label label-warning">Pending</span></td>
                     <td>
@@ -1062,7 +1062,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td><a href="scripts/invoice.html">OR7429</a></td>
                     <td>iPhone 6 Plus</td>
                     <td><span class="label label-danger">Delivered</span></td>
                     <td>
@@ -1070,7 +1070,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td><a href="scripts/invoice.html">OR7429</a></td>
                     <td>Samsung Smart TV</td>
                     <td><span class="label label-info">Processing</span></td>
                     <td>
@@ -1078,7 +1078,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR1848</a></td>
+                    <td><a href="scripts/invoice.html">OR1848</a></td>
                     <td>Samsung Smart TV</td>
                     <td><span class="label label-warning">Pending</span></td>
                     <td>
@@ -1086,7 +1086,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR7429</a></td>
+                    <td><a href="scripts/invoice.html">OR7429</a></td>
                     <td>iPhone 6 Plus</td>
                     <td><span class="label label-danger">Delivered</span></td>
                     <td>
@@ -1094,7 +1094,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td><a href="pages/examples/invoice.html">OR9842</a></td>
+                    <td><a href="scripts/invoice.html">OR9842</a></td>
                     <td>Call of Duty IV</td>
                     <td><span class="label label-success">Shipped</span></td>
                     <td>

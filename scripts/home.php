@@ -13,7 +13,7 @@
         header("Locaton: indexfinal1.php");
     }
     else{
-        header("Location: ../pages/examples/login.php");
+        header("Location: ../scripts/login.php");
     }
 
     if(isset($_REQUEST[ 'logout'])){
@@ -28,7 +28,7 @@
              //echo "Collection userdata Selected Successfully";
             $collection->remove(array("SessionID" => $ses));
             //echo "Documents deleted successfully";
-            header("Location: ../pages/examples/login.php");
+            header("Location: ../scripts/login.php");
             session_regenerate_id();
         }
         else{

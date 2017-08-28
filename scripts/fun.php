@@ -15,7 +15,7 @@
     // $db = $m->helfis;
     // //echo "Databse loginreg selected";
     // $collection1 = $db->login;
-    // $collection2 = $db->myhell;
+    // $collection2 = $db->helfis_user_profiles;
     // //echo "Collection userdata Selected Successfully";
     // }
     // catch (Exception $e){
@@ -30,7 +30,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->myhell;
+    $collection2 = $db->helfis_user_profiles;
 
      function getData($sessionn) {
 
@@ -42,7 +42,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->myhell;
+    $collection2 = $db->helfis_user_profiles;
 
 
     //echo $collection2->findOne(array("Email" => getemail($session)))["First Name"];
@@ -59,7 +59,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->myhell;
+    $collection2 = $db->helfis_user_profiles;
     
     
   // echo $collection1->findOne(array("SessionID" => $session))["Email"];
@@ -86,7 +86,7 @@ return $collection1->findOne(array("SessionID" => $session))["Email"];
 
     $db = $m->helfis;
     //echo "Databse loginreg selected";
-    $collection2 = $db->myhell;
+    $collection2 = $db->helfis_user_profiles;
      $collection1 = $db->login;
     $collection = $db->assessme;
 

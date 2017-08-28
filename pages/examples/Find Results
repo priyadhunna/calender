@@ -1,0 +1,1057 @@
+Searching 1057 files for "scripts"
+
+C:\wamp64\www\helfisdash11\calendar.php:
+    1: <?php require_once '../scripts/connection.php'; ?>
+    2  <!DOCTYPE html>
+    3  
+
+C:\wamp64\www\helfisdash11\calendar1.php:
+    1: <?php require_once '../scripts/connection.php'; ?>
+    2  <!DOCTYPE html>
+    3  <html>
+
+C:\wamp64\www\helfisdash11\classes.php:
+    1: <?php require_once '../scripts/connection.php'; ?>
+    2       <?php
+    3  
+
+C:\wamp64\www\helfisdash11\indexfinal1.php:
+    1  <?php
+    2: require_once 'scripts/dp.php';
+    3:  require_once 'scripts/connection.php';
+    4: require_once 'scripts/per.php';
+    5: require_once 'scripts/fun.php';
+    6: require_once 'scripts/rewards.php';
+    7: require_once 'scripts/HealthQuotes.php';
+    8: require_once 'scripts/Analysis.php';
+    9  ?>
+   10  
+   ..
+  298                  </div>
+  299                  <div class="pull-right">
+  300:                   <a href="scripts/home.php?logout=true" class="btn btn-default btn-flat">Sign out</a>
+  301                  </div>
+  302                </li>
+  ...
+  493          </div>
+  494          <div class="modal-body">
+  495:           <?php require 'scripts/assessme.php'; ?>
+  496            </div>
+  497          <div class="modal-footer">
+  ...
+  941               <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+  942                  <div class="btn-group" data-toggle="btn-toggle">
+  943:                 <button type="button" class="btn btn-info" onclick="location.href='scripts/calendar.php'">Make Appointment</button>
+  944            
+  945                </div>
+
+C:\wamp64\www\helfisdash11\piya.php:
+    1: <?php require_once '../scripts/connection.php'; ?>
+    2  <!DOCTYPE html>
+    3  
+
+C:\wamp64\www\helfisdash11\starter.html:
+  416  <!-- ./wrapper -->
+  417  
+  418: <!-- REQUIRED JS SCRIPTS -->
+  419  
+  420  <!-- jQuery 2.2.3 -->
+
+C:\wamp64\www\helfisdash11\assets\js\jquery-1.10.2.js:
+  147  					context = context instanceof jQuery ? context[0] : context;
+  148  
+  149: 					// scripts is true for back-compat
+  150  					jQuery.merge( this, jQuery.parseHTML(
+  151  						match[1],
+  ...
+  519  	// data: string of html
+  520  	// context (optional): If specified, the fragment will be created in this context, defaults to document
+  521: 	// keepScripts (optional): If true, will include scripts passed in the html string
+  522: 	parseHTML: function( data, context, keepScripts ) {
+  523  		if ( !data || typeof data !== "string" ) {
+  524  			return null;
+  525  		}
+  526  		if ( typeof context === "boolean" ) {
+  527: 			keepScripts = context;
+  528  			context = false;
+  529  		}
+  ...
+  531  
+  532  		var parsed = rsingleTag.exec( data ),
+  533: 			scripts = !keepScripts && [];
+  534  
+  535  		// Single tag
+  ...
+  538  		}
+  539  
+  540: 		parsed = jQuery.buildFragment( [ data ], context, scripts );
+  541: 		if ( scripts ) {
+  542: 			jQuery( scripts ).remove();
+  543  		}
+  544  		return jQuery.merge( [], parsed.childNodes );
+  ...
+  924  		// discovered by ChrisS here: http://bugs.jquery.com/ticket/12282#comment:15
+  925  		if ( document.readyState === "complete" ) {
+  926: 			// Handle it asynchronously to allow scripts the opportunity to delay ready
+  927  			setTimeout( jQuery.ready );
+  928  
+  ...
+ 6214  		args = core_concat.apply( [], args );
+ 6215  
+ 6216: 		var first, node, hasScripts,
+ 6217: 			scripts, doc, fragment,
+ 6218  			i = 0,
+ 6219  			l = this.length,
+ ....
+ 6243  
+ 6244  			if ( first ) {
+ 6245: 				scripts = jQuery.map( getAll( fragment, "script" ), disableScript );
+ 6246: 				hasScripts = scripts.length;
+ 6247  
+ 6248  				// Use the original fragment for the last item instead of the first because it can end up
+ ....
+ 6254  						node = jQuery.clone( node, true, true );
+ 6255  
+ 6256: 						// Keep references to cloned scripts for later restoration
+ 6257: 						if ( hasScripts ) {
+ 6258: 							jQuery.merge( scripts, getAll( node, "script" ) );
+ 6259  						}
+ 6260  					}
+ ....
+ 6263  				}
+ 6264  
+ 6265: 				if ( hasScripts ) {
+ 6266: 					doc = scripts[ scripts.length - 1 ].ownerDocument;
+ 6267  
+ 6268: 					// Reenable scripts
+ 6269: 					jQuery.map( scripts, restoreScript );
+ 6270  
+ 6271: 					// Evaluate executable scripts on first document insertion
+ 6272: 					for ( i = 0; i < hasScripts; i++ ) {
+ 6273: 						node = scripts[ i ];
+ 6274  						if ( rscriptType.test( node.type || "" ) &&
+ 6275  							!jQuery._data( node, "globalEval" ) && jQuery.contains( doc, node ) ) {
+ ....
+ 6320  }
+ 6321  
+ 6322: // Mark scripts as having already been evaluated
+ 6323  function setGlobalEval( elems, refElements ) {
+ 6324  	var elem,
+ ....
+ 6379  	}
+ 6380  
+ 6381: 	// IE blanks contents when cloning scripts, and tries to evaluate newly-set text
+ 6382  	if ( nodeName === "script" && dest.text !== src.text ) {
+ 6383  		disableScript( dest ).text = src.text;
+ ....
+ 6535  	},
+ 6536  
+ 6537: 	buildFragment: function( elems, context, scripts, selection ) {
+ 6538  		var j, elem, contains,
+ 6539  			tmp, tag, tbody, wrap,
+ ....
+ 6647  
+ 6648  			// Capture executables
+ 6649: 			if ( scripts ) {
+ 6650  				j = 0;
+ 6651  				while ( (elem = tmp[ j++ ]) ) {
+ 6652  					if ( rscriptType.test( elem.type || "" ) ) {
+ 6653: 						scripts.push( elem );
+ 6654  					}
+ 6655  				}
+ ....
+ 7758  
+ 7759  				// If a selector was specified, locate the right elements in a dummy div
+ 7760: 				// Exclude scripts to avoid IE 'Permission Denied' errors
+ 7761  				jQuery("<div>").append( jQuery.parseHTML( responseText ) ).find( selector ) :
+ 7762  
+
+C:\wamp64\www\helfisdash11\scripts\calendar.php:
+    1  <?php 
+    2    error_reporting(0);
+    3: require_once '../scripts/connection.php'; ?>
+    4: <?php require_once '../scripts/library.php'; ?>
+    5  
+    6  
+
+C:\wamp64\www\helfisdash11\pages\calendar.php:
+    1: <?php require_once '../scripts/connection.php'; ?>
+    2  <!DOCTYPE html>
+    3  <html>
+
+C:\wamp64\www\helfisdash11\pages\examples\login.html:
+    5      echo "Connected";
+    6  
+    7:     require_once '../../scripts/library.php';
+    8      if(chkLogin()){
+    9:         header("Location: ../../scripts/home.php");
+   10      }
+   11  ?>
+
+C:\wamp64\www\helfisdash11\pages\examples\login.php:
+    2  <?php
+    3      
+    4: require_once '../../scripts/connection.php'; 
+    5: require_once '../../scripts/library.php';
+    6  
+    7      if(chkLogin()){
+
+C:\wamp64\www\helfisdash11\pages\examples\profile.html:
+  580              <div class="tab-content">
+  581               <div class="tab-pane active" id="settings">
+  582:                 <form class="form-horizontal" method="POST" action="../../scripts/userprofile.php">
+  583                    <div class="form-group">
+  584                      <label for="inputName" class="col-sm-2 control-label">Name</label>
+  ...
+ 1018  <!-- jQuery 2.2.3 -->
+ 1019  <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+ 1020: <script src="../../scripts/userprofile.php"></script>
+ 1021  
+ 1022  <!-- Bootstrap 3.3.6 -->
+
+C:\wamp64\www\helfisdash11\pages\examples\profile.php:
+  618              <div class="tab-content">
+  619               <div class="tab-pane active" id="settings">
+  620:                 <form class="form-horizontal" method="POST" action="../../scripts/userprofile.php">
+  621                    <div class="form-group">
+  622                      <label for="inputName" class="col-sm-2 control-label">Name</label>
+  ...
+ 1056  <!-- jQuery 2.2.3 -->
+ 1057  <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+ 1058: <script src="../../scripts/userprofile.php"></script>
+ 1059  
+ 1060  <!-- Bootstrap 3.3.6 -->
+
+C:\wamp64\www\helfisdash11\pages\examples\register.html:
+    1  <!DOCTYPE html>
+    2  <?php
+    3:     require_once '../../scripts/library.php';
+    4      if(chkLogin()){
+    5:         header("Location: ./../scripts/home.php");
+    6      }
+    7  ?>
+
+C:\wamp64\www\helfisdash11\pages\examples\register.php:
+    1  <!DOCTYPE html>
+    2  <?php
+    3:     require_once '../../scripts/library.php';
+    4      if(chkLogin()){
+    5:         header("Location: ../../scripts/home.php");
+    6      }
+    7  ?>
+    .
+   40      <p class="login-box-msg">Register</p>
+   41  
+   42:     <form action="../../scripts/register_action.php" method="post">
+   43        <div class="form-group has-feedback">
+   44          <input type="text" class="form-control" name="fname" placeholder="Full name" required>
+   ..
+   95  </div>
+   96  <!-- /.register-box -->
+   97: <script src="../../scripts/myscript.js" type="text/javascript"></script>
+   98  <!-- jQuery 2.2.3 -->
+   99  <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+
+C:\wamp64\www\helfisdash11\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.js:
+  341      }
+  342  
+  343:     // Allow external scripts to initialize this library in case it's loaded after the document has loaded
+  344      api.init = init;
+  345  
+  ...
+ 6834   *    - sandboxing of physical documents causes that the dom isn't accessible anymore from the outside (iframe.contentWindow, ...)
+ 6835   *    - setting the "allow-same-origin" flag would fix that, but then still javascript and dom events refuse to fire
+ 6836:  *    - therefore the "allow-scripts" flag is needed, which then would deactivate any security, as the js executed inside the iframe
+ 6837   *      can do anything as if the sandbox attribute wasn't set
+ 6838   *
+ ....
+ 6920       *    Therefore we need to set the "allow-same-origin" flag which enables accessing the iframe's dom
+ 6921       *    But then there's another problem, DOM events (focus, blur, change, keypress, ...) aren't fired.
+ 6922:      *    In order to make this happen we need to set the "allow-scripts" flag.
+ 6923:      *    A combination of allow-scripts and allow-same-origin is almost the same as setting no sandbox attribute at all.
+ 6924       *  - Chrome & Safari, doesn't seem to support sandboxing correctly when the iframe's html is inlined (no physical document)
+ 6925       *  - IE needs to have the security="restricted" attribute set before the iframe is
+ ....
+ 7003          // It more or less just takes care of basic attacks and prevents accidental theft of sensitive information
+ 7004          // IE is secure though, which is the most important thing, since IE is the only browser, who
+ 7005:         // takes over scripts & styles into contentEditable elements when copied from external websites
+ 7006          // or applications (Microsoft Word, ...)
+ 7007          var i, length;
+
+C:\wamp64\www\helfisdash11\plugins\ckeditor\LICENSE.md:
+  226  making modifications to it.  For an executable work, complete source
+  227  code means all the source code for all modules it contains, plus any
+  228: associated interface definition files, plus the scripts used to
+  229  control compilation and installation of the executable.  However, as a
+  230  special exception, the source code distributed need not include
+  ...
+  493  making modifications to it.  For a library, complete source code means
+  494  all the source code for all modules it contains, plus any associated
+  495: interface definition files, plus the scripts used to control compilation
+  496  and installation of the library.
+  497  
+  ...
+  879       1.11. "Source Code" means the preferred form of the Covered Code for
+  880       making modifications to it, including all modules it contains, plus
+  881:      any associated interface definition files, scripts used to control
+  882       compilation and installation of an Executable, or source code
+  883       differential comparisons against either the Original Code or another
+  ...
+ 1339  "Font Software" refers to the set of files released by the Copyright
+ 1340  Holder(s) under this license and clearly marked as such. This may
+ 1341: include source files, build scripts and documentation.
+ 1342  
+ 1343  "Reserved Font Name" refers to any names specified as such after the
+
+C:\wamp64\www\helfisdash11\plugins\ckeditor\samples\old\jquery.html:
+   47  			<p>
+   48  				This sample shows how to use the <a href="http://docs.ckeditor.com/#!/guide/dev_jquery">jQuery adapter</a>.
+   49: 				Note that you have to include both CKEditor and jQuery scripts before including the adapter.
+   50  			</p>
+   51  
+
+C:\wamp64\www\helfisdash11\plugins\ckeditor\samples\old\sample.js:
+    4   */
+    5  
+    6: // Tool scripts for the sample pages.
+    7  // This file can be ignored and is not required to make use of CKEditor.
+    8  
+
+C:\wamp64\www\helfisdash11\plugins\datatables\jquery.dataTables.js:
+ 10843  		 *      $('#example').dataTable( {
+ 10844  		 *        "serverSide": true,
+ 10845: 		 *        "ajax": "scripts/server_processing.php",
+ 10846  		 *        "deferLoading": 57
+ 10847  		 *      } );
+ .....
+ 10853  		 *      $('#example').dataTable( {
+ 10854  		 *        "serverSide": true,
+ 10855: 		 *        "ajax": "scripts/server_processing.php",
+ 10856  		 *        "deferLoading": [ 57, 100 ],
+ 10857  		 *        "search": {
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\columns.html:
+  597  				<div class="php">
+  598  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  599: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  600  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  601  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\complete-callback.html:
+  605  				<div class="php">
+  606  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  607: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  608  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  609  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\fill-both.html:
+  594  				<div class="php">
+  595  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  596: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  597  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  598  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\fill-horizontal.html:
+  594  				<div class="php">
+  595  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  596: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  597  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  598  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\scrolling.html:
+  591  				<div class="php">
+  592  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  593: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  594  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  595  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\simple.html:
+  584  				<div class="php">
+  585  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  586: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  587  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  588  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\AutoFill\examples\step-callback.html:
+  613  				<div class="php">
+  614  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  615: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  616  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  617  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\alt_insert.html:
+  587  				<div class="php">
+  588  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  589: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  590  					documentation</a>.</p>
+  591  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\col_filter.html:
+  606  				<div class="php">
+  607  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  608: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  609  					documentation</a>.</p>
+  610  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\colvis.html:
+  585  				<div class="php">
+  586  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  587: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  588  					documentation</a>.</p>
+  589  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\fixedcolumns.html:
+  781  				<div class="php">
+  782  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  783: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  784  					documentation</a>.</p>
+  785  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\fixedheader.html:
+  585  				<div class="php">
+  586  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  587: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  588  					documentation</a>.</p>
+  589  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\jqueryui.html:
+  585  				<div class="php">
+  586  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  587: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  588  					documentation</a>.</p>
+  589  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\new_init.html:
+  576  				<div class="php">
+  577  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  578: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  579  					documentation</a>.</p>
+  580  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\predefined.html:
+  586  				<div class="php">
+  587  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  588: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  589  					documentation</a>.</p>
+  590  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\realtime.html:
+  587  				<div class="php">
+  588  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  589: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  590  					documentation</a>.</p>
+  591  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\reset.html:
+  599  				<div class="php">
+  600  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  601: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  602  					documentation</a>.</p>
+  603  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\scrolling.html:
+  582  				<div class="php">
+  583  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  584: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  585  					documentation</a>.</p>
+  586  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\server_side.html:
+   28  		processing: true,
+   29  		serverSide: true,
+   30: 		ajax: "../../../examples/server_side/scripts/objects.php",
+   31  		columns: [
+   32  			{ data: "first_name" },
+   ..
+   96  		processing: true,
+   97  		serverSide: true,
+   98: 		ajax: &quot;../../../examples/server_side/scripts/objects.php&quot;,
+   99  		columns: [
+  100  			{ data: &quot;first_name&quot; },
+  ...
+  142  				<div class="php">
+  143  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  144: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  145  					documentation</a>.</p>
+  146  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\simple.html:
+  580  				<div class="php">
+  581  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  582: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  583  					documentation</a>.</p>
+  584  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColReorder\examples\state_save.html:
+  581  				<div class="php">
+  582  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  583: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  584  					documentation</a>.</p>
+  585  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\button_order.html:
+  582  				<div class="php">
+  583  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  584: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  585  					documentation</a>.</p>
+  586  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\exclude_columns.html:
+  584  				<div class="php">
+  585  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  586: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  587  					documentation</a>.</p>
+  588  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\group_columns.html:
+  608  				<div class="php">
+  609  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  610: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  611  					documentation</a>.</p>
+  612  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\jqueryui.html:
+  589  				<div class="php">
+  590  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  591: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  592  					documentation</a>.</p>
+  593  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\mouseover.html:
+  584  				<div class="php">
+  585  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  586: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  587  					documentation</a>.</p>
+  588  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\new_init.html:
+  581  				<div class="php">
+  582  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  583: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  584  					documentation</a>.</p>
+  585  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\restore.html:
+  593  				<div class="php">
+  594  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  595: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  596  					documentation</a>.</p>
+  597  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\simple.html:
+  579  				<div class="php">
+  580  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  581: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  582  					documentation</a>.</p>
+  583  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\text.html:
+  583  				<div class="php">
+  584  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  585: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  586  					documentation</a>.</p>
+  587  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\title_callback.html:
+  588  				<div class="php">
+  589  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  590: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  591  					documentation</a>.</p>
+  592  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\two_tables.html:
+  291  				<div class="php">
+  292  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  293: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  294  					documentation</a>.</p>
+  295  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\ColVis\examples\two_tables_identical.html:
+  315  				<div class="php">
+  316  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  317: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  318  					documentation</a>.</p>
+  319  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\bootstrap.html:
+  770  				<div class="php">
+  771  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  772: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  773  					documentation</a>.</p>
+  774  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\col_filter.html:
+  808  				<div class="php">
+  809  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  810: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  811  					documentation</a>.</p>
+  812  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\colvis.html:
+  784  				<div class="php">
+  785  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  786: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  787  					documentation</a>.</p>
+  788  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\css_size.html:
+  779  				<div class="php">
+  780  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  781: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  782  					documentation</a>.</p>
+  783  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\index_column.html:
+  883  				<div class="php">
+  884  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  885: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  886  					documentation</a>.</p>
+  887  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\left_right_columns.html:
+  767  				<div class="php">
+  768  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  769: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  770  					documentation</a>.</p>
+  771  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\right_column.html:
+  767  				<div class="php">
+  768  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  769: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  770  					documentation</a>.</p>
+  771  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\rowspan.html:
+  608  				<div class="php">
+  609  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  610: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  611  					documentation</a>.</p>
+  612  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\server-side-processing.html:
+   41  		scrollX:        true,
+   42  		scrollCollapse: true,
+   43: 		ajax: "../../../examples/server_side/scripts/server_processing.php",
+   44  		serverSide: true
+   45  	} );
+   ..
+  103  		scrollX:        true,
+  104  		scrollCollapse: true,
+  105: 		ajax: &quot;../../../examples/server_side/scripts/server_processing.php&quot;,
+  106  		serverSide: true
+  107  	} );
+  ...
+  155  				<div class="php">
+  156  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  157: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  158  					documentation</a>.</p>
+  159  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\simple.html:
+  764  				<div class="php">
+  765  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  766: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  767  					documentation</a>.</p>
+  768  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\size_fixed.html:
+  775  				<div class="php">
+  776  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  777: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  778  					documentation</a>.</p>
+  779  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\size_fluid.html:
+  775  				<div class="php">
+  776  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  777: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  778  					documentation</a>.</p>
+  779  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedColumns\examples\two_columns.html:
+  761  				<div class="php">
+  762  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  763: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  764  					documentation</a>.</p>
+  765  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedHeader\examples\header_footer.html:
+  596  				<div class="php">
+  597  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  598: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  599  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  600  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedHeader\examples\simple.html:
+  592  				<div class="php">
+  593  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  594: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  595  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  596  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedHeader\examples\top_left_right.html:
+  190  				<div class="php">
+  191  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  192: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  193  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  194  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedHeader\examples\two_tables.html:
+  309  				<div class="php">
+  310  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  311: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  312  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  313  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\FixedHeader\examples\zIndexes.html:
+  608  				<div class="php">
+  609  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  610: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  611  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  612  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\KeyTable\examples\events.html:
+  712  				<div class="php">
+  713  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  714: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  715  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  716  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\KeyTable\examples\html.html:
+  583  				<div class="php">
+  584  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  585: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  586  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  587  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\KeyTable\examples\scrolling.html:
+  593  				<div class="php">
+  594  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  595: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  596  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  597  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\KeyTable\examples\simple.html:
+  587  				<div class="php">
+  588  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  589: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  590  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  591  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\child-rows\column-control.html:
+  781  				<div class="php">
+  782  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  783: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  784  					documentation</a>.</p>
+  785  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\child-rows\custom-renderer.html:
+  790  				<div class="php">
+  791  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  792: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  793  					documentation</a>.</p>
+  794  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\child-rows\disable-child-rows.html:
+  746  				<div class="php">
+  747  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  748: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  749  					documentation</a>.</p>
+  750  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\child-rows\right-column.html:
+  777  				<div class="php">
+  778  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  779: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  780  					documentation</a>.</p>
+  781  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\child-rows\whole-row-control.html:
+  780  				<div class="php">
+  781  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  782: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  783  					documentation</a>.</p>
+  784  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\display-control\auto.html:
+  740  				<div class="php">
+  741  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  742: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  743  					documentation</a>.</p>
+  744  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\display-control\classes.html:
+  174  				<div class="php">
+  175  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  176: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  177  					documentation</a>.</p>
+  178  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\display-control\complexHeader.html:
+  635  				<div class="php">
+  636  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  637: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  638  					documentation</a>.</p>
+  639  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\display-control\fixedHeader.html:
+  752  				<div class="php">
+  753  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  754: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  755  					documentation</a>.</p>
+  756  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\display-control\init-classes.html:
+  142  				<div class="php">
+  143  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  144: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  145  					documentation</a>.</p>
+  146  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\initialisation\ajax.html:
+  137  				<div class="php">
+  138  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  139: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  140  					documentation</a>.</p>
+  141  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\initialisation\className.html:
+  739  				<div class="php">
+  740  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  741: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  742  					documentation</a>.</p>
+  743  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\initialisation\default.html:
+  749  				<div class="php">
+  750  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  751: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  752  					documentation</a>.</p>
+  753  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\initialisation\new.html:
+  748  				<div class="php">
+  749  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  750: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  751  					documentation</a>.</p>
+  752  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\initialisation\option.html:
+  747  				<div class="php">
+  748  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  749: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  750  					documentation</a>.</p>
+  751  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\styling\bootstrap.html:
+  758  				<div class="php">
+  759  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  760: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  761  					documentation</a>.</p>
+  762  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\styling\compact.html:
+  743  				<div class="php">
+  744  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  745: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  746  					documentation</a>.</p>
+  747  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\styling\foundation.html:
+  749  				<div class="php">
+  750  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  751: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  752  					documentation</a>.</p>
+  753  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Responsive\examples\styling\scrolling.html:
+  753  				<div class="php">
+  754  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  755: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  756  					documentation</a>.</p>
+  757  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\api_scrolling.html:
+  128  				<div class="php">
+  129  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  130: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  131  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  132  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\large_js_source.html:
+  135  				<div class="php">
+  136  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  137: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  138  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  139  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\server-side_processing.html:
+  174  				<div class="php">
+  175  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  176: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  177  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  178  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\simple.html:
+  129  				<div class="php">
+  130  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  131: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  132  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  133  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\state_saving.html:
+  124  				<div class="php">
+  125  					<p>The script used to perform the server-side processing for this table is shown below. Please note
+  126: 					that this is just an example script using PHP. Server-side processing scripts can be written in any
+  127  					language, using <a href="//datatables.net/manual/server-side">the protocol described in the
+  128  					DataTables documentation</a>.</p>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\Scroller\examples\data\ssp.php:
+   51   */
+   52  
+   53: require( '../../../../examples/server_side/scripts/ssp.class.php' );
+   54  
+   55  echo json_encode(
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\ajax.html:
+  136  				<div class="php">
+  137  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  138: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  139  					documentation</a>.</p>
+  140  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\alter_buttons.html:
+  583  				<div class="php">
+  584  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  585: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  586  					documentation</a>.</p>
+  587  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\bootstrap.html:
+  591  				<div class="php">
+  592  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  593: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  594  					documentation</a>.</p>
+  595  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\button_text.html:
+  615  				<div class="php">
+  616  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  617: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  618  					documentation</a>.</p>
+  619  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\collection.html:
+  600  				<div class="php">
+  601  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  602: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  603  					documentation</a>.</p>
+  604  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\defaults.html:
+  580  				<div class="php">
+  581  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  582: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  583  					documentation</a>.</p>
+  584  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\jqueryui.html:
+  583  				<div class="php">
+  584  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  585: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  586  					documentation</a>.</p>
+  587  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\multi_instance.html:
+  584  				<div class="php">
+  585  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  586: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  587  					documentation</a>.</p>
+  588  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\multiple_tables.html:
+  289  				<div class="php">
+  290  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  291: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  292  					documentation</a>.</p>
+  293  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\new_init.html:
+  590  				<div class="php">
+  591  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  592: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  593  					documentation</a>.</p>
+  594  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\pdf_message.html:
+  601  				<div class="php">
+  602  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  603: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  604  					documentation</a>.</p>
+  605  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\plug-in.html:
+  628  				<div class="php">
+  629  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  630: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  631  					documentation</a>.</p>
+  632  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\select_column.html:
+  174  				<div class="php">
+  175  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  176: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  177  					documentation</a>.</p>
+  178  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\select_multi.html:
+  595  				<div class="php">
+  596  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  597: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  598  					documentation</a>.</p>
+  599  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\select_os.html:
+  595  				<div class="php">
+  596  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  597: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  598  					documentation</a>.</p>
+  599  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\select_single.html:
+  592  				<div class="php">
+  593  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  594: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  595  					documentation</a>.</p>
+  596  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\simple.html:
+  579  				<div class="php">
+  580  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  581: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  582  					documentation</a>.</p>
+  583  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datatables\extensions\TableTools\examples\swf_path.html:
+  585  				<div class="php">
+  586  					<p>The script used to perform the server-side processing for this table is shown below. Please note that this is just an example script using PHP. Server-side
+  587: 					processing scripts can be written in any language, using <a href="//datatables.net/manual/server-side">the protocol described in the DataTables
+  588  					documentation</a>.</p>
+  589  				</div>
+
+C:\wamp64\www\helfisdash11\plugins\datepicker\locales\bootstrap-datepicker.sw.js:
+    2   * Swahili translation for bootstrap-datepicker
+    3   * Edwin Mugendi <https://github.com/edwinmugendi>
+    4:  * Source: http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=xnfaqyzcku
+    5   */
+    6  ;(function($){
+
+C:\wamp64\www\helfisdash11\plugins\input-mask\jquery.inputmask.phone.extensions.js:
+   10  
+   11   $(selector).inputmask("phone", {
+   12:                 url: "Scripts/jquery.inputmask/phone-codes/phone-codes.json", 
+   13                  onKeyValidation: function () { //show some metadata in the console
+   14                      console.log($(this).inputmask("getmetadata")["name_en"]);
+
+183 matches across 120 files

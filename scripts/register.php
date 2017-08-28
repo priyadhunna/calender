@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
-    require_once '../../scripts/library.php';
+    require_once 'library.php';
     if(chkLogin()){
-        header("Location: ../../scripts/home.php");
+        header("Location: home.php");
     }
 ?>
 <html>
@@ -39,7 +39,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register</p>
 
-    <form action="../../scripts/register_action.php" method="post">
+    <form action="../../loginphp/register_action.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="fname" placeholder="Full name" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -94,7 +94,7 @@
   <!-- /.form-box -->
 </div>
 <!-- /.register-box -->
-<script src="../../scripts/myscript.js" type="text/javascript"></script>
+<script src="../../loginphp/myscript.js" type="text/javascript"></script>
 <!-- jQuery 2.2.3 -->
 <script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->

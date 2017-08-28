@@ -15,7 +15,7 @@ if(isset($_POST['submit']))
 
 $email = $_POST['email']; 
 
-$sdb= db.myhell.aggregate({$group:{"Password":"1"}},{$match:{"Email":"email"}}); 
+$sdb= db.helfis_user_profiles.aggregate({$group:{"Password":"1"}},{$match:{"Email":"email"}}); 
 $query = mysql_query($sql); 
 if(!$query)  
     { 
