@@ -19,7 +19,6 @@ require_once 'scripts/Analysis.php';
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="dist/credit/favicon.png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -816,9 +815,12 @@ require_once 'scripts/Analysis.php';
           <div class="row">
            <div class="col-sm-6">
           <!-- Chat box -->
-          <div class="box box-success" >
-            <div class="box-header"  >
-
+          <div class="box box-success"  >
+            <div class="box-header" id="boxid" >
+            <div>
+                  <a href="scripts/Assessment.html"   class="btn btn-primary booking-button"  id="buttonid" target="_blank" >submit</a> 
+                </div>
+                
 
                <h3 class="modal-title">DIET PLAN</h3>
                <hr>
@@ -832,10 +834,11 @@ require_once 'scripts/Analysis.php';
            
             </div>
           
-            <div class="modal" id="myMod2" data-backdrop="static">
+            <div class="modal" id="myMod2" data-backdrop="static" >
   <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+        <div class="abc" display="block">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <h4 class="modal-title">Diet Chart</h4></div>
           <div class="box-body">
@@ -910,6 +913,7 @@ require_once 'scripts/Analysis.php';
         </div>
       </div>
     </div>
+    </div>  
 </div>
             <div class="box-body chat" id="diet-box">
               <!-- chat item -->
@@ -986,6 +990,18 @@ Shahi Egg Curry.</b></pre><br><br>
             </div>
 
             <!-- /.chat -->
+            <script type="text/javascript">
+$('#buttonid').click(function()){
+ $('#boxid').addClass('abc');
+});
+$('#buttonid').click(function(){
+ $('#boxid').removeClass('abc');
+});
+
+
+
+
+</script>
             
           </div>
           </div>
@@ -1529,18 +1545,7 @@ Shahi Egg Curry.</b></pre><br><br>
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script type="text/javascript">
-$('#loginbtn').Click(function()){
- $('#login').addClass('login-show');
-});
-$('#loginClose').Click(function(){
- $('#login').removeClass('login-show');
-});
 
-
-$
-
-</script>
 
 </body>
 </html>
