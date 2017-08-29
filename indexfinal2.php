@@ -991,10 +991,10 @@ Shahi Egg Curry.</b></pre><br><br>
 
             <!-- /.chat -->
             <script type="text/javascript">
-$('#buttonid').Click(function()){
+$('#buttonid').click(function()){
  $('#boxid').addClass('abc');
 });
-$('#buttonid').Click(function(){
+$('#buttonid').click(function(){
  $('#boxid').removeClass('abc');
 });
 
