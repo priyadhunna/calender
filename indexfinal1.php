@@ -5,7 +5,6 @@ require_once 'scripts/per.php';
 require_once 'scripts/fun.php';
 require_once 'scripts/rewards.php';
 require_once 'scripts/HealthQuotes.php';
-require_once 'scripts/Analysis.php';
 ?>
 
 <!DOCTYPE html>
@@ -555,10 +554,10 @@ require_once 'scripts/Analysis.php';
         </div>
         </div>
       <hr>
-<canvas id="mycanvas" width="385" height="250">
+
     
     <?php 
-      echo getAnalysis();
+     include ("scripts/Analysis.php");
     ?>
     </div>
     
@@ -569,10 +568,7 @@ require_once 'scripts/Analysis.php';
     </div>
     
   </div>
-  </div>
-  
-
-
+</div>
 
 
 
@@ -613,112 +609,11 @@ require_once 'scripts/Analysis.php';
             <div class="box-body chat" id="chat-box">
              <div class="content table-responsive table-full-width">
              <?php  
-                
-               echo $data;
-
+              require ("scripts/performance.php");
              ?>
-                               <!--  <table class="table table-hover table-striped" id="mytable">
-                                    <thead>
-                                        <th>RANK</th>
-                                        <th>NAME</th>
-                                        <th>POINTS</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Salman Khan</td>
-                                            <td>24</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>2</td>
-                                            <td>Virat Kohli</td>
-                                            <td>27</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>3</td>
-                                            <td>Priya</td>
-                                            <td>34</td>
-                                            
-                                         </tr>
-                                           <tr>
-                                            <td>1</td>
-                                            <td>Salman Khan</td>
-                                            <td>24</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>2</td>
-                                            <td>Virat Kohli</td>
-                                            <td>27</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>3</td>
-                                            <td>Priya</td>
-                                            <td>34</td>
-                                            
-                                         </tr>
-                                           <tr>
-                                            <td>1</td>
-                                            <td>Salman Khan</td>
-                                            <td>24</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>2</td>
-                                            <td>Virat Kohli</td>
-                                            <td>27</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>3</td>
-                                            <td>Priya</td>
-                                            <td>34</td>
-                                            
-                                         </tr>
-                                           <tr>
-                                            <td>1</td>
-                                            <td>Salman Khan</td>
-                                            <td>24</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>2</td>
-                                            <td>Virat Kohli</td>
-                                            <td>27</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>3</td>
-                                            <td>Priya</td>
-                                            <td>34</td>
-                                            
-                                         </tr>  <tr>
-                                            <td>1</td>
-                                            <td>Salman Khan</td>
-                                            <td>24</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>2</td>
-                                            <td>Virat Kohli</td>
-                                            <td>27</td>
-                                            
-                                        </tr>
-                                         <tr>
-                                            <td>3</td>
-                                            <td>Priya</td>
-                                            <td>34</td>
-                                            
-                                         </tr>
-                                      </tbody>
-                                  </table> -->
-
+                               
           </div>
           </div>
-
         </div>
         <div class="modal-footer">
          
