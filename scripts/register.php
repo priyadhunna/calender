@@ -39,7 +39,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register</p>
 
-    <form action="../../loginphp/register_action.php" method="post">
+    <form action="register.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="fname" placeholder="Full name" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

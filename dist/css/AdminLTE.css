@@ -1571,6 +1571,7 @@ a:focus {
 }
 .box.box-success {
   border-top-color: #00a65a;
+  display: none;
 }
 .box.box-default {
   border-top-color: #d2d6de;
@@ -1601,6 +1602,7 @@ a:focus {
 }
 .box.box-solid > .box-header .btn.btn-default {
   background: transparent;
+  display: none;
 }
 .box.box-solid > .box-header .btn:hover,
 .box.box-solid > .box-header a:hover {

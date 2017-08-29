@@ -4,25 +4,20 @@ require_once 'connection.php'; ?>
 <?php require_once 'library.php'; ?>
 <?php require_once 'fun.php'; ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Calendar</title>
+  <title>FAQ</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="shortcut icon" href="../dist/credit/favicon.png">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- fullCalendar 2.2.5-->
-  <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.min.css">
-  <link rel="stylesheet" href="../plugins/fullcalendar/fullcalendar.print.css" media="print">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -37,11 +32,12 @@ require_once 'connection.php'; ?>
   <![endif]-->
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
+<!-- Site wrapper -->
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../indexfinal1.php" class="logo">
+   <a href="../indexfinal1.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
@@ -62,167 +58,62 @@ require_once 'connection.php'; ?>
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-             
-              <span class="label label-success"></span>
+              
+              
             </a>
             <ul class="dropdown-menu">
-              <li class="header"></li>
+              
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
-                     
-                     
+                      
+                      
                     </a>
                   </li>
                   <!-- end message -->
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                      
-                      </div>
-                      
-                      
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        
-                      </div>
-                     
-                     
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        
-                      </div>
-                     
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        
-                      </div>
-                      
-                    </a>
-                  </li>
                 </ul>
               </li>
-              <li class="footer"><a href="#"></a></li>
+              
             </ul>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              
-              <span class="label label-warning"></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header"></li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li>
-                    <a href="#">
                     
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                     
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="#">
-                     
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                     
-                    </a>
                   </li>
                 </ul>
               </li>
-             
+        
             </ul>
           </li>
           <!-- Tasks: style can be found in dropdown.less -->
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            
-              <span class="label label-danger"></span>
+             
+              
             </a>
             <ul class="dropdown-menu">
-              <li class="header"></li>
+              
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- Task item -->
                     <a href="#">
-                      <h3>
-                        
-                        <small class="pull-right"></small>
-                      </h3>
+                      
                       <div class="progress xs">
                         <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only"></span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
                         
-                        <small class="pull-right"></small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only"></span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                       
-                        <small class="pull-right"></small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only"></span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        
-                        <small class="pull-right"></small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only"></span>
                         </div>
                       </div>
                     </a>
@@ -230,36 +121,38 @@ require_once 'connection.php'; ?>
                   <!-- end task item -->
                 </ul>
               </li>
-              <li class="footer">
-                <a href="#"></a>
-              </li>
+             
             </ul>
           </li>
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs"> <?php 
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">
+                <big><?php 
 
               echo getData(session_id()); 
 
-              ?> </span>
+              ?></big>
+              </span>
             </a>
-             <ul class="dropdown-menu">
+            <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                
-               <p><center></center> <big><?php 
+                 <p>  <big><?php 
 
               echo getData(session_id()); 
 
-              ?></big></center></p>
-                
-                
-                <!-- /.row -->
+              ?></big><p>
+<li class="user-body">
+<div class="row">
+<div class="col-xs-4 text-center">
+</div></div>
               </li>
+              <!-- Menu Body -->
+            
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
@@ -272,35 +165,43 @@ require_once 'connection.php'; ?>
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"></a>
-          </li>
+          
         </ul>
       </div>
     </nav>
   </header>
-  <!-- Left side column. contains the logo and sidebar -->
+
+  <!-- =============================================== -->
+
+  <!-- Left side column. contains the sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-            <big><?php 
+          <p> <a href="#"></a><big><?php 
 
               echo getData(session_id()); 
 
-              ?></big>
-              <br>
-              <br>
-          <a href="#"><i class="fa fa-circle text-success"></i> Profile</a>
+              ?></big></p>
+          <a href="#"><i class="fa-fa-user-circle" style="font-size:20px;color:white;"></i>Profile</a>
         </div>
       </div>
       <!-- search form -->
-        <!-- /.search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
@@ -311,34 +212,23 @@ require_once 'connection.php'; ?>
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-         
-        </li>
         
-       
-        
-        <li class="active">
-          <a href="#">
+          <a href="calendar.php">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red"></small>
-              <small class="label pull-right bg-blue"></small>
-            </span>
+            
           </a>
         </li>
-
-
         <li>
+           <li>
           <a href="http://www.mobigarage.com/">
             <i class="fa fa-shopping-cart"></i> <span>Store</span>
             
           </a>
         </li>  
 
-                    
-         
-        </li> 
+        
         <li>
-          <a href="faq.php">
+          <a href="#">
             <i class="fa fa-question"></i> <span>FAQs</span>
             
           </a>
@@ -349,181 +239,116 @@ require_once 'connection.php'; ?>
             
           </a>
         </li>
-
-
-         
-        
-       
+          
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
+
+  <!-- =============================================== -->
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Calendar
-        <small>Control panel</small>
+        Frequently Asked Questions
+        <small>answers to all queries!</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Calendar</li>
+        <li><a href="#">FAQs</a></li>
+      
       </ol>
     </section>
-
+<br><br>
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-            <div class="col-xs-12">
-                
-               
-                <br />
-                <div id="bootstrapModalFullCalendar"></div>
+
+     <div class="row">
+        <div class="col-md-12">
+          <div class="box box-success collapsed-box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Expandable</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
             </div>
-        </div>
-    </div>
-
-    <div id="fullCalModal" class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span> <span class="sr-only">close</span></button>
-                    <h4 id="modalTitle" class="modal-title"></h4>
-                </div>
-                <div id="modalBody" class="modal-body"></div>
-                <div class="modal-footer">
-                    <a   class="btn btn-primary booking-button"  id="eventUrl" target="_blank" name="book">Booking</a> 
-                </div>
-                    <!--<form class="form-horizontal" method="post"  name="book" action="booking.php">
-                <div class="form-group">
-                    
-                    <input type="hidden"   name="name"  value='<?php //echo '$key["date"] '?>' />
-                    
-                </div>
-                <div class="form-group">
-                    
-                    <input type="hidden"   name="date" value='<?php //echo '$key["date"] '?>'/>
-                </div>
-                <div class="form-group">
-                
-                    
-                    <input type="hidden"   name="class" value='<?php //echo '$key["class"] '?>'/>
-                </div>
-               
-                <button type="submit"  class="btn btn-default">Booking</button>
-            </form>        
-                    </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              The body of the box
             </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
         </div>
-    </div>-->
+        <div class="col-md-12">
+          <div class="box box-warning collapsed-box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Expandable</h3>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              The body of the box
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <div class="col-md-12">
+          <div class="box box-info collapsed-box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Expandable</h3>
 
-   
-       <?php
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              The body of the box
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <div class="col-md-12">
+          <div class="box box-danger collapsed-box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Expandable</h3>
 
-
-
-        try{
-         $db = $m->helfis;
-         $collection = $db->calendar;
-         //$collection=$db->calendar.createIndex(  {"user_id": 1} ,  {unique: true}  )
-
-         $cursor = $collection->find();
-     
-
-       $dollar = 
-          "<script>
-          console.log(moment());
-        $(document).ready(function() {
-            $('#bootstrapModalFullCalendar').fullCalendar({
-                header: {
-                    left: '',
-                    center: 'prev title next',
-                    right: ''
-                },
-                eventClick:  function(event, jsEvent, view) {
-                    $('#modalTitle').html(event.title);
-                    $('#modalBody').html(event.description);
-                    $('#eventUrl').attr('href',event.url);
-                    $('#fullCalModal').modal();
-                    console.log(event.description,event.title);
-                    return false;
-                },
-                  events:
-                [" ;
-                  
-                foreach ($cursor as $key) {
-
-
-                   $date = explode('.',$key["date"])[0];
-                  
-                    $dollar .= "{
-                      title:\" ". $key["name"] . "\",
-                      allday:\"false\",
-                     description:\"<span class='modal-description-class'>" . $key["class"] . "</span><br><span class='modal-description-date'>" . $key["date"] . "</span>\",
-                      start:moment('" . $date . "'),
-                      end:moment('" . $date . "'),
-                      
-                   },";
-
-
-
-                     
-                   }
-
-                   $dollar .= "
-                   {
-                      title:\"CSS Meetup\",
-                      allday:\"false\",
-                     description:\"<p>This is just a fake description for the CSS Meetup.</p><p>Nothing to see!</p>\",
-                      start:moment(11/7/2017),
-                      end:moment(12/7/2017),
-                      
-                   }
-
-                ]
-            });
-        });
-
-
-
-
-    </script>";
-    echo $dollar;
-  }
-       
-     
-
-
-
- 
-catch(MongoException $mongoException){
-        print $mongoException;
-        exit;
-    }
-?>
-
-
-
-   
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              The body of the box
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
     </section>
     <!-- /.content -->
   </div>
-  </div>
-  </div>
-  </section>
-
   <!-- /.content-wrapper -->
 
- 
-  
-  <footer class="main-footer">
+ <footer class="main-footer">
    <div class="container-fluid">
   
   <nav class="pull-left">
@@ -563,6 +388,7 @@ catch(MongoException $mongoException){
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+
       <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
@@ -752,16 +578,13 @@ catch(MongoException $mongoException){
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
- 
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
 <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<!-- Slimscroll -->
+<!-- SlimScroll -->
 <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../plugins/fastclick/fastclick.js"></script>
@@ -769,26 +592,5 @@ catch(MongoException $mongoException){
 <script src="../dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
-<!-- fullCalendar 2.2.5 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<script src="../plugins/fullcalendar/fullcalendar.min.js"></script>
-<!-- Page specific script -->
-<script type="text/javascript">
-  $('.booking-button').click(function(){
-    var dataTitle = $('.modal-title').text();
-    var dataClass = $('.modal-description-class').text();
-    var dataDate = $('.modal-description-date').text();
-    $('.close').click();
-    alert("booking done ");
-    $.post("booking.php",{dataTitle,dataDate,dataClass},function(data,status){
-      console.log(status);    
-    });
-  });
-
-$('.user-menu').click(function(){
-$(this).addClass("open");
-});
-</script>
-    
 </body>
 </html>
