@@ -45,9 +45,14 @@ require_once 'connection.php'; ?>
     <!-- Logo -->
     <a href="indexfinal1.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>H</b>F</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>HEL</b>FIS</span>
+     <span>
+  
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+    <img class="img-responsive" src="../dist/img/credit/helfislogo.png" alt="logo" style="width:
+150px;height:40px;  padding-left:5px; padding-top:10px;">
+
+
+      </span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
