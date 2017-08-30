@@ -51,12 +51,12 @@ onnext="return validateForm()" method="post">
    
     
     
-   <div> <input validate="required" validation-message="this field is required" type="text" name="name" placeholder="Name*" class="inputValidation" />
-    <input type="text" name="gender" placeholder="gender*" class="inputValidation"/>
+   <div> <input type="text" name="name" placeholder="Name*" class="inputValidation" required/>
+    <input type="text" name="gender" placeholder="gender*" class="inputValidation" validate="required"/>
     <input id="date" type="date" name="dob" placeholder="Date of Birth*" class="inputValidation" value="2017-06-01"/>
-    <input type="text" name="email" placeholder="Email*" class="inputValidation"/>
-    <input type="int" name="no" placeholder="Contact no*" class="inputValidation" />
-    <textarea name="address" placeholder="Address*" class="inputValidation"></textarea></div>
+    <input type="email" name="email" placeholder="Email*" class="inputValidation" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"/>
+    <input type="number" name="no" placeholder="Contact no*" class="inputValidation" />
+    <textarea name="address" placeholder="Address*" class="inputValidation" validate="required"></textarea></div>
     
     <input type="button" name="next" class="next action-button" value="Next" />
 
@@ -67,7 +67,7 @@ onnext="return validateForm()" method="post">
   <fieldset>
     <h2 class="fs-title">2</h2>
     <h3 class="fs-subtitle">This is step 2</h3>
-    <input type="text" name="height" placeholder="Height(in cms)" />
+    <input type="text" name="height" placeholder="Height(in cms)" required="true" />
     <input type="text" name="weight" placeholder="Weight(in kg)" />
     <input type="text" name="blood group" placeholder="Blood Group" />
     

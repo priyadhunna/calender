@@ -1602,23 +1602,13 @@ a:focus {
 }
 .box.box-solid > .box-header .btn.btn-default {
   background: transparent;
-  display: none;
-}
-.box-header{
-display: none;
-
+  
 }
 
-
-
-.abc{
-
-  display:block;
-}
 .box.box-solid > .box-header .btn:hover,
 .box.box-solid > .box-header a:hover {
   background: rgba(0, 0, 0, 0.1);
-   display: none;
+   
 }
 .box.box-solid.box-default {
   border: 1px solid #d2d6de;
@@ -4953,4 +4943,5 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+
 }

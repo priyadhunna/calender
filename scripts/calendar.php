@@ -13,9 +13,11 @@ require_once 'connection.php'; ?>
   <title> Calendar</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="dist/credit/favicon.png">
   <!-- Bootstrap 3.3.6 -->
   <link rel="shortcut icon" href="../dist/credit/favicon.png">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="icon" href="../dist/img/credit/favicon.png" type="image/png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
@@ -41,12 +43,13 @@ require_once 'connection.php'; ?>
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../indexfinal1.php" class="logo">
+    <a href="indexfinal1.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>H</b>F</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>HEL</b>FIS</span>
     </a>
+
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->

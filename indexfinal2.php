@@ -816,10 +816,12 @@ require_once 'scripts/Analysis.php';
            <div class="col-sm-6">
           <!-- Chat box -->
           <div class="box box-success"  >
-            <div class="box-header" id="boxid" >
-            <div>
+
+           <div>
                   <a href="scripts/Assessment.html"   class="btn btn-primary booking-button"  id="buttonid" target="_blank" >submit</a> 
                 </div>
+            <div class="box-header" id="boxid" >
+           
                 
 
                <h3 class="modal-title">DIET PLAN</h3>
@@ -1002,6 +1004,20 @@ $('#buttonid').click(function(){
 
 
 </script>
+<style>
+.box-header{
+display: none;
+
+}
+
+
+
+.abc{
+
+  display:block;
+}
+</style>
+
             
           </div>
           </div>
@@ -1545,6 +1561,7 @@ $('#buttonid').click(function(){
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 
 
 </body>

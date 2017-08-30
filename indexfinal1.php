@@ -18,7 +18,7 @@ require_once 'scripts/HealthQuotes.php';
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="dist/credit/favicon.png">
+  <link rel="icon" href="dist/img/credit/favicon.png" type="image/png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
@@ -90,11 +90,16 @@ require_once 'scripts/HealthQuotes.php';
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="indexfinal.html" class="logo">
+    <a href="indexfinal1.php" class="logo">
+  
+    <span>
+  
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>H</b>F</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>HEL</b>FIS</span>
+    <img class="img-responsive" src="dist/img/credit/helfislogo.png" alt="logo" style="width:
+150px;height:40px;  padding-left:5px; padding-top:10px;">
+
+
+      </span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -906,9 +911,9 @@ Shahi Egg Curry.</b></pre><br><br>
           
             
         
-        <div class="modal-header"  id="class-box">
+          <div class="modal-header"  id="class-box">
 
-        <h3 class="modal-title"><i style="color:blue"><h2><b>Today</b></h2></i></h3>
+        <h3 class="modal-title"><i style="color:blue">Today</i></h3>
         <div class="row">
 
           <div class="modal-body">
@@ -916,13 +921,26 @@ Shahi Egg Curry.</b></pre><br><br>
           <div class="box box-widget widget-user-2">
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-blue">
-       
+            <?php
+ // getData(session_id());
+              try{
+                     $db = $m->helfis;
+                     $collection = $db->bookingevents;
+                     $fname = getname(session_id());
+                     $cursor = $collection->find(array("FirstName"=>$fname));
+                      // print_r($cursor);
+                    foreach($cursor as $document){
+                    
+                     $dataexplode = explode('T',$document['date']);
+                    // print_r($document);
+                    if($dataexplode[0]==date('Y-m-d')){
+              ?>
               <div class="row">
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">TIME</h5>
 
-                    <span class="description-text">11:00AM</span>
+                    <span class="description-text"> <?= $dataexplode[1] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -930,7 +948,7 @@ Shahi Egg Curry.</b></pre><br><br>
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">DATE</h5>
-                    <span class="description-text">12/8/2017</span>
+                    <span class="description-text"><?= $dataexplode[0] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -938,12 +956,21 @@ Shahi Egg Curry.</b></pre><br><br>
                 <div class="col-sm-4">
                   <div class="description-block">
                     <h5 class="description-header">CLASS</h5>
-                    <span class="description-text">AEROBICS</span>
+                    <span class="description-text"><?= $document['class'] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
               </div>
+                <?php 
+                }
+                }
+                }
+              catch(MongoException $mongoException){
+                  print $mongoException;
+                  exit;
+              }
+              ?>
               <!-- /.row -->
             </div>
           <!-- /.widget-user -->
@@ -952,6 +979,7 @@ Shahi Egg Curry.</b></pre><br><br>
           <!-- /.widget-user -->
         </div>
         </div>
+      
          <div class="modal-header">
         <h3 class="modal-title"><i style="color:blue"><h2><b>Upcoming</b></h2></i></h3>
         <div class="row">

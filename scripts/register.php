@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <link rel="icon" href="../dist/img/credit/favicon.png" type="image/png">
   <!-- iCheck -->
   <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
 
@@ -39,7 +40,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register</p>
 
-    <form action="register.php" method="post">
+    <form action="register_action.php" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="fname" placeholder="Full name" required>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
