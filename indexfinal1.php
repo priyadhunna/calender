@@ -64,21 +64,13 @@ require_once 'scripts/HealthQuotes.php';
         jQuery(".hameid-loader-overlay").fadeOut(500);
     });
 </script>
-
-    <script src="Chart.js"></script>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+<script src="Chart.js"></script>
   </head>
   <style>
   .hameid-loader-overlay {
     width: 100%;
     height: 100%;
-    background: url('dist/img/preloader.gif') center no-repeat #FFF;
+    background: url('dist/img/preloader-1.gif') center no-repeat #FFF;
     z-index: 99999;
     position: fixed;
 }
@@ -922,7 +914,6 @@ Shahi Egg Curry.</b></pre><br><br>
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-blue">
             <?php
- // getData(session_id());
               try{
                      $db = $m->helfis;
                      $collection = $db->bookingevents;
@@ -985,16 +976,29 @@ Shahi Egg Curry.</b></pre><br><br>
         <div class="row">
         <div class="modal-body">
           <div class="box-body">
-          <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
+
+          
+           <?php
+              try{
+                     $db = $m->helfis;
+                     $collection = $db->bookingevents;
+                     $fname = getname(session_id());
+                     $cursor = $collection->find(array("FirstName"=>$fname));
+                      // print_r($cursor);
+                    foreach($cursor as $document){
+                    
+                     $dataexplode = explode('T',$document['date']);
+                     $date[]=$date[0]."".$date[1];
+                    if($dataexplode[0]>date('Y-m-d')){
+              ?>
+              <div class="box box-widget widget-user-2">
             <div class="widget-user-header bg-green">
-       
               <div class="row">
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">TIME</h5>
 
-                    <span class="description-text">11:00AM</span>
+                    <span class="description-text"> <?= $dataexplode[1] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -1002,7 +1006,7 @@ Shahi Egg Curry.</b></pre><br><br>
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
                     <h5 class="description-header">DATE</h5>
-                    <span class="description-text">12/8/2017</span>
+                    <span class="description-text"><?= $dataexplode[0] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
@@ -1010,123 +1014,25 @@ Shahi Egg Curry.</b></pre><br><br>
                 <div class="col-sm-4">
                   <div class="description-block">
                     <h5 class="description-header">CLASS</h5>
-                    <span class="description-text">AEROBICS</span>
+                    <span class="description-text"><?= $document['class'] ?></span>
                   </div>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
               </div>
-              <!-- /.row -->
-            </div>
+                <?php 
+                }?>
+                  </div>
           <!-- /.widget-user -->
         </div>
-        <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-orange">
-       
-              <div class="row">
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">TIME</h5>
-
-                    <span class="description-text">11:00AM</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">DATE</h5>
-                    <span class="description-text">12/8/2017</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4">
-                  <div class="description-block">
-                    <h5 class="description-header">CLASS</h5>
-                    <span class="description-text">AEROBICS</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-          <!-- /.widget-user -->
-        </div>
+                <?php }
+                }
+              catch(MongoException $mongoException){
+                  print $mongoException;
+                  exit;
+              }
+              ?>
     
-          <!-- /.widget-user -->
-           <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-blue">
-       
-              <div class="row">
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">TIME</h5>
-
-                    <span class="description-text">11:00AM</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">DATE</h5>
-                    <span class="description-text">12/8/2017</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4">
-                  <div class="description-block">
-                    <h5 class="description-header">CLASS</h5>
-                    <span class="description-text">AEROBICS</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-          <!-- /.widget-user -->
-        </div>
-         <div class="box box-widget widget-user-2">
-            <!-- Add the bg color to the header using any of the bg-* classes -->
-            <div class="widget-user-header bg-red">
-       
-              <div class="row">
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">TIME</h5>
-
-                    <span class="description-text">11:00AM</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4 border-right">
-                  <div class="description-block">
-                    <h5 class="description-header">DATE</h5>
-                    <span class="description-text">12/8/2017</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-4">
-                  <div class="description-block">
-                    <h5 class="description-header">CLASS</h5>
-                    <span class="description-text">AEROBICS</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-          <!-- /.widget-user -->
-        </div>
      </div>
         </div>
         </div>
@@ -1134,8 +1040,6 @@ Shahi Egg Curry.</b></pre><br><br>
       </div>
     </div>
     </div>
-    </div>
-     </div>
     <div class="row">
           <div class="col-md-12 col-md-12">
            <div class="box box-info">
