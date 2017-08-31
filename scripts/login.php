@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-    
+ //error_reporting(0);    
 require_once 'connection.php'; 
 require_once 'library.php';
 
     if(chkLogin()){
-        header("Location:../../indexfinal1.php");
+        header("Location:../indexfinal1.php");
     }
 ?>
 <?php
@@ -61,6 +61,7 @@ require_once 'library.php';
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="../dist/img/credit/favicon.png" type="image/png">
   <title>Helfis Log In</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">

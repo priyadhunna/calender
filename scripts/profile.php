@@ -1,22 +1,28 @@
-<!DOCTYPE html>
+
+<?php
+  error_reporting(0);
+require_once 'connection.php'; ?>
+<?php require_once 'library.php'; ?>
+<?php require_once 'fun.php'; ?>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | User Profile</title>
+  <title>User Profile</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
-  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="icon" href="../dist/img/credit/favicon.png" type="image/png">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +36,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="../../indexfinal1.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>H</b>F</span>
       <!-- logo for regular state and mobile devices -->
@@ -48,200 +54,7 @@
 
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <!-- <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li> -->
-                <!-- inner menu: contains the actual data -->
-                <!-- <ul class="menu">
-                  <li> --><!-- start message -->
-                    <!-- <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li> -->
-                  <!-- end message -->
-                 <!--  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li> -->
-          <!-- Notifications: style can be found in dropdown.less -->
-          <!-- <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li> -->
-                <!-- inner menu: contains the actual data -->
-                <!-- <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li> -->
-          <!-- Tasks: style can be found in dropdown.less -->
-          <!-- <li class="dropdown tasks-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li> -->
-                <!-- inner menu: contains the actual data -->
-                <!-- <ul class="menu">
-                  <li><!-- Task item -->
-                    <!-- <a href="#">
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li> --> 
-                  <!-- end task item -->
-                  <!-- <li>Task item -->
-                    <!-- <a href="#">
-                      <h3>
-                        Create a nice theme
-                        <small class="pull-right">40%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">40% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li> -->
-                  <!-- end task item -->
-                  <!-- <li>Task item -->
-                    <!-- <a href="#">
-                      <h3>
-                        Some task I need to do
-                        <small class="pull-right">60%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li> -->
-                  <!-- end task item -->
-                  <!-- <li>Task item -->
-                    <!-- <a href="#">
-                      <h3>
-                        Make beautiful transitions
-                        <small class="pull-right">80%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">80% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li> -->
-                  <!-- end task item -->
-                <!-- </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li> -->
-          <!-- User Account: style can be found in dropdown.less -->
+          
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
@@ -520,47 +333,20 @@
           <div class="box box-primary">
             <div class="box-body box-profile">
 
-              <img class="profile-user-img img-responsive img-circle" id="clok" style="background-image: url('../../dist/img/user2-160x160.jpg'); background-size: 100% 100%;height: 100px;">
+              <img class="profile-user-img img-responsive img-circle" id="clok" style="background-image: url('../dist/img/user2-160x160.jpg'); background-size: 100% 100%;height: 100px;">
 
-              <h3 class="profile-username text-center">Nina Mcintire</h3>
+              <h3 class="profile-username text-center">
+                 <span class="hidden-xs"> <?php 
 
-              <p class="text-muted text-center">Software Engineer</p>
+              echo getData(session_id()); 
+
+              ?> </span>
+              </h3>
+
+                            <input type='file' id='getval' name="background-image" onchange="readURL(event)"/>
+
               <br>
-              <form action="<?php self(); ?>" method="post" enctype="multipart/form-data">
-                  <input type="file" name="fileToUpload" id="fileToUpload">
-                  <br>
-                  <input type="submit" value="Change Image" name="submit" class="btn btn-primary btn-block">
-                  <br>
-              </form>
-<?php
-$target_dir = "../../dist/img/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1; //if 0 not uploaded if 1 uploaded
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "done";
-        $uploadOk = 1;
-    } else {
-        echo "error";
-        $uploadOk = 0;
-    }
-
-    if ($uploadOk == 0) {
-    echo "not uploaded.";
-    } else {
-        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "uploaded.";
-        } else {
-            echo "Error";
-        }
-    }
-
-    //here use database query to store $target_file
-}
-?>
             </div>
             <!-- /.box-body -->
           </div>
@@ -617,30 +403,30 @@ if(isset($_POST["submit"])) {
             </ul>
             <div class="tab-content">
              <div class="tab-pane active" id="settings">
-                <form class="form-horizontal" method="POST" action="../../scripts/userprofile.php">
+                <form class="form-horizontal" method="POST" action="userprofile.php">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+                    <label for="inputName" class="col-sm-2 control-label" >Name</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputName" placeholder="Full Name">
+                      <input type="text" class="form-control" name="inputName" placeholder="Full Name" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-8">
-                      <input type="email" class="form-control" name="inputEmail" placeholder="shashwat@povr.in" disabled>
+                      <input type="email" class="form-control" name="inputEmail" placeholder="email" required >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputAge" class="col-sm-2 control-label">Age</label>
+                    <label for="inputAge" class="col-sm-2 control-label" >Age</label>
 
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" name="inputAge" placeholder="Age">
+                      <input type="number" class="form-control" name="inputAge" placeholder="Age" required>
                     </div>
-                    <label for="inputGender" class="col-sm-2 control-label">Gender</label>
+                    <label for="inputGender" class="col-sm-2 control-label" >Gender</label>
                     <div class="col-sm-3">
-                      <select class="form-control" name="inputGender">
+                      <select class="form-control" name="inputGender" required>
                     <option>Male</option>
                     <option>Female</option>
                       </select>
@@ -651,15 +437,15 @@ if(isset($_POST["submit"])) {
                     <label for="inputWeight" class="col-sm-2 control-label">Weight</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputWeight" placeholder="Weight">
+                      <input type="text" class="form-control" name="inputWeight" placeholder="Weight" required>
                     </div>
                     <label for="inputHeight" class="col-sm-2 control-label">Height</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputHeight" placeholder="Height">
+                      <input type="text" class="form-control" name="inputHeight" placeholder="Height" required>
                     </div>
                      <label for="inputBMI" class="col-sm-1 control-label">BMI</label>
                     <div class="col-sm-2">
-                      <input type="number" class="form-control" name="inputBMI" placeholder="BMI">
+                      <input type="number" class="form-control" name="inputBMI" placeholder="BMI" required>
                     </div>
                   </div>
                   <br><br>
@@ -667,18 +453,18 @@ if(isset($_POST["submit"])) {
                     <label for="inputMother" class="col-sm-2 control-label">Mother</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputMother" placeholder="Name">
+                      <input type="text" class="form-control" name="inputMother" placeholder="Name" required>
                     </div>
                     <label for="inputFather" class="col-sm-2 control-label">Father</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Name">
+                      <input type="text" class="form-control" name="inputFather" placeholder="Name" required>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <label for="inputStat" class="col-sm-2 control-label">Status</label>
                       <div class="col-sm-3">
-                      <select class="form-control" name="inputGender">
+                      <select class="form-control" name="inputGender" required>
                         <option>Single</option>
                         <option>Married</option>
                       </select>
@@ -686,7 +472,7 @@ if(isset($_POST["submit"])) {
                    
                     <label for="inputChild" class="col-sm-2 control-label">Children</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputChild" placeholder="Children">
+                      <input type="text" class="form-control" name="inputChild" placeholder="Children" required>
                     </div>
                   </div>
                   <div class="form-group">
@@ -706,13 +492,15 @@ if(isset($_POST["submit"])) {
                 </form>
               </div>
               <!-- /.tab-pane -->
-               <div class="tab-pane" id="accset">
+
+
+<div class="tab-pane" id="accset">
                 <form class="form-horizontal">
                   <div class="form-group">
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="shashwat@povr.in" disabled>
+                      <input type="email" class="form-control" id="inputEmail" placeholder="email" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -748,10 +536,12 @@ if(isset($_POST["submit"])) {
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Save Changes</button>
+                      <button type="submit" class="btn btn-danger" name="save">Save Changes</button>
                     </div>
                   </div>
-                </form>
+                </form> 
+
+
               </div>
               <!-- /.tab-pane -->
 
@@ -759,7 +549,6 @@ if(isset($_POST["submit"])) {
                 <form class="form-horizontal">
                   <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label">Name</label>
-
                     <div class="col-sm-10">
                       <input type="email" class="form-control" id="inputName" placeholder="Name">
                     </div>
@@ -1054,17 +843,17 @@ if(isset($_POST["submit"])) {
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="../../plugins/jQuery/jquery-2.2.3.min.js"></script>
-<script src="../../scripts/userprofile.php"></script>
+<script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="userprofile.php"></script>
 
 <!-- Bootstrap 3.3.6 -->
-<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="../../bootstrap/js/sabka.js"></script>
-<script src="../../plugins/fastclick/fastclick.js"></script>
+<script src="../bootstrap/js/sabka.js"></script>
+<script src="../plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/app.min.js"></script>
+<script src="../dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="../dist/js/demo.js"></script>
 </body>
 </html>

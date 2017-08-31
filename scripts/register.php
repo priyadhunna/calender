@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+ error_reporting(0);
     require_once 'library.php';
     if(chkLogin()){
         header("Location: home.php");

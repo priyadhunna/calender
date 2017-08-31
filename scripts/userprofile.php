@@ -1,28 +1,19 @@
-<?php
-    try{
-     $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
 
-    echo "Connected";
-     //echo "Connection to database Successfull!";echo"<br />";
+   <?php 
+error_reporting(0);
+   require_once 'connection.php'; ?>
+<?php require_once 'library.php'; ?>
 
-    $db = $m->helfis;
-    //echo "Databse loginreg selected";
-    $collection = $db->dashboard; 
-    //echo "Collection userdata Selected Successfully";
-    }
-    catch (Exception $e){
-        die("Error. Couldn't connect to the server. Please Check");
-    }
-    
-?>
+<?php  echo session_id();  ?>
 
 
 
- <?php 
-
+  <?php
+  
    if(isset($_POST['profile'])){
        
         $fname = $_POST['inputName'];
+        $email = $_POST['inputemail'];
        
         $age    = $_POST['inputAge'];
         $gender = $_POST['inputGender'];
@@ -33,13 +24,14 @@
         $father = $_POST['inputFather'];
         $status = $_POST['inputStat'];
         $child  = $_POST['inputChild'];
-        // $temp  = $_POST['pass'];
-        // $options = array('cost' => 10);
-        // $pass = password_hash($temp, PASSWORD_BCRYPT, $options);
+         $temp  = $_POST['pass'];
+         $options = array('cost' => 10);
+        $pass = password_hash($temp, PASSWORD_BCRYPT, $options);
       
         $arrays = array(
             
             "First Name"    => $fname,
+            "Email"         => $email,
             
             "Age"           => $age, 
             "Gender"        => $gender,
@@ -54,12 +46,33 @@
         
       
 
-        $collection->insert($arrays);
+         $db = $m->helfis;
+                        //echo "Databse loginreg selected";
+                        $collection = $db->Profile; 
+                        //echo "Collection userdata Selected Successfully";
+                        $collection->insert($arrays);
+                       // echo "Document inserted successfully";
         echo "Document inserted successfully";
-        header("Location: ../indexfinal.html");    
+        header("Location: ../indexfinal1.php");    
        
        
        
  }
-       echo "shashwat";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       echo "priya";
  ?>

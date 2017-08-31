@@ -12,11 +12,7 @@
         $collection->insert($document);
         return true;
     }
-       function booking($key){
-        global $collection;
-        $collection->insert($key);
-        return true;
-    }
+      
 
 
       

@@ -1033,22 +1033,7 @@ Shahi Egg Curry.</b></pre><br><br>
               }
               ?>
     
-              </div>
-              <!-- /.row -->
-            </div>
-          <!-- /.widget-user -->
-        </div>
-     </div>
-        </div>
-        </div>
-  </div>
-      </div>
-    </div>
-    </div>
-    </div>
-     </div>
-
-
+      
     <div class="row">
           <div class="col-md-12 col-md-12">
            <div class="box box-info">
@@ -1074,35 +1059,16 @@ Shahi Egg Curry.</b></pre><br><br>
           <!-- /.box -->
         </div>
         </div>
-       
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
         <!-- /.col -->
-          
-
-          
-    </section>
+ </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
    <div class="container-fluid">
-  
   <nav class="pull-left">
-                  
-  
-                            <a href="http://www.helfis.com/">
+  <a href="http://www.helfis.com/">
                                 Home
                             </a>&nbsp &nbsp 
                        
