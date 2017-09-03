@@ -35,7 +35,7 @@ foreach ($cursor as $key => $value) {
 			</td>
 
 			<td>
-				<?= $value['Points'];?>
+				<?= $value['Points']*5;?>
 			</td>
 		</tr>
 <?php }
@@ -55,7 +55,7 @@ foreach ($cursor as  $value) {
 				</td>
 
 				<td>
-					<?= $value['Points'];?>
+					<?= $value['Points']*5;?>
 				</td>
 			</tr>
 <?php }} ?>

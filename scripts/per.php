@@ -8,7 +8,7 @@ $i=0;
 $db = $m->helfis;
 $fname= getname(session_id());
 $collection = $db->bookingevents;
-$cursor      = $collection->find(array('FirstName'=>'abhinav'));
+$cursor      = $collection->find(array('FirstName'=>$fname));
 foreach ($cursor as $key => $value) {
     $dateExplode =   explode('T', $value['date']);
     if(date('Y-m-d')>$dateExplode[0]){
