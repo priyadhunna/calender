@@ -1,7 +1,7 @@
 <?php
 require_once 'scripts/dp.php';
 //require_once 'scripts/connection.php';
-require_once 'scripts/per.php';
+// require_once 'scripts/per.php';
 require_once 'scripts/fun.php';
 require_once 'scripts/rewards.php';
 require_once 'scripts/HealthQuotes.php';

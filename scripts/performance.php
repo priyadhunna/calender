@@ -18,7 +18,6 @@ $cursor	=	$cursor->sort($array)->limit(3);
 		<thead>
 			<th>Rank</th>
 			<th>Name</th>
-			<th>Activity</th>
 			<th>Points</th>
 		
 		</thead>
@@ -32,12 +31,9 @@ foreach ($cursor as $key => $value) {
 				<?= ++$i; ?>
 			</td>
 			<td>
-				<?= $value['Firstname'] ;?>
+				<?= $value['FirstName'] ;?>
 			</td>
 
-			<td>
-				<?= $value['class'] ;?>
-			</td>
 			<td>
 				<?= $value['Points'];?>
 			</td>
@@ -55,12 +51,9 @@ foreach ($cursor as  $value) {
 					<?= $i; ?>
 				</td>
 				<td>
-					<?= $value['Firstname'] ;?>
+					<?= $value['FirstName'] ;?>
 				</td>
 
-				<td>
-					<?= $value['class'] ;?>
-				</td>
 				<td>
 					<?= $value['Points'];?>
 				</td>
