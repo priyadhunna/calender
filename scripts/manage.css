@@ -1,0 +1,121 @@
+
+ .body{
+  padding-top: 500px;
+
+ }
+.wrapper {
+
+  display: table;
+  width: 80%;
+  height: auto;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  @extend %clearfix;
+  
+  input[type="text"] {
+    height: 35px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+  }
+}
+
+
+
+
+.quick-create-event,
+.import-events {
+  display: table-cell;
+  height: 100%;
+  @extend %clearfix;
+  padding: 20px;
+
+}
+
+.quick-create-event {
+  width: percentage(3/4);
+  border-right: 1px solid #ccc;
+  
+  button { width: percentage(1/3); }
+}
+
+.import-events {
+  width: percentage(1/4);
+  background: #eee;
+  
+   button { width: 100%; }
+}
+
+h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 10px 0;
+}
+
+.event-name {
+  width: percentage(1/3);
+  float: left;
+  padding-right: 20px;
+  margin-bottom: 20px;
+  
+  input { width: 100%; }
+}
+
+.datepicker {
+  width: percentage(2/3);
+  float: left;
+  margin-bottom: 20px;
+  
+  input {
+    width: 45%;
+    float: left;
+  }
+  
+  .datepicker-dash {
+    width: 10%;
+    float: left;
+    text-align: center;
+    height: 30px;
+    line-height: 32px;
+  }
+}
+
+.event-type,
+.event-template {
+  width: percentage(1/3);
+  float: left;
+  padding-right: 20px;
+  
+  input { width: 100%; }
+}
+
+button {
+  height: 35px;
+  background: #0090cb;
+  color: #fff;
+  border: none;
+  float: left;
+}
+
+.choose-file {
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+  
+  input { 
+    width: 100%; 
+    padding-right: 50px;
+  }
+  
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    
+    svg { fill: #fff; }
+  }
+}

@@ -52,6 +52,54 @@
         echo $collection2->findOne(array("EmailAddress" => $email))["FirstName"];
        
      }
+
+
+
+    $db = $m->helfis;
+    //echo "Databse loginreg selected";
+    $collection1 = $db->login;
+    $collection2 = $db->helfis_user_profiles;
+
+     function getpassword($sessionn) {
+
+         $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
+
+    
+     //echo "Connection to database Successfull!";echo"<br />";
+
+    $db = $m->helfis;
+    //echo "Databse loginreg selected";
+    $collection1 = $db->login;
+    $collection2 = $db->helfis_user_profiles;
+
+
+    //echo $collection2->findOne(array("Email" => getemail($session)))["First Name"];
+   
+       $email = getemail($sessionn);
+       //$em = strval($email);
+        echo $collection2->findOne(array("EmailAddress" => $email))["Password"];
+       
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      
     function getemail($session){
 

@@ -287,7 +287,7 @@ require_once 'scripts/HealthQuotes.php';
               <span class="hidden-xs">
               <?php 
 
-              echo getData(session_id()); 
+               echo getData(session_id()); 
 
               ?></span>
             </a>
@@ -469,17 +469,17 @@ require_once 'scripts/HealthQuotes.php';
       </ol>
     </section>
 
-    <!-- Main content -->
+    <!-- Main content --> <div class="small-box bg-aqua">
+            <div class="inner">
+              <p style="font-size:20px";>Assess me</p>
+               <br> <br>
+            </div>
+         
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-aqua">
-            <div class="inner">
-              <p style="font-size:20px";>Assess me</p>
-               <br> <br>
-            </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
@@ -963,15 +963,11 @@ Shahi Egg Curry.</b></pre><br><br>
               }
               ?>
               <!-- /.row -->
-            </div>
-          <!-- /.widget-user -->
-        </div>
-    
-          <!-- /.widget-user -->
-        </div>
-        </div>
+              </div>
+              </div>
+         
       
-         <div class="modal-header">
+          <div class="modal-header">
         <h3 class="modal-title"><i style="color:blue"><h2><b>Upcoming</b></h2></i></h3>
         <div class="row">
         <div class="modal-body">
@@ -1027,6 +1023,7 @@ Shahi Egg Curry.</b></pre><br><br>
         </div>
                 <?php }
                 }
+
               catch(MongoException $mongoException){
                   print $mongoException;
                   exit;
@@ -1063,8 +1060,7 @@ Shahi Egg Curry.</b></pre><br><br>
         <!-- /.col -->
  </section>
     <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+  </div>  <!-- /.content-wrapper -->
   <footer class="main-footer">
    <div class="container-fluid">
   <nav class="pull-left">
@@ -1331,18 +1327,5 @@ Shahi Egg Curry.</b></pre><br><br>
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<script type="text/javascript">
-$('#loginbtn').Click(function()){
- $('#login').addClass('login-show');
-});
-$('#loginClose').Click(function(){
- $('#login').removeClass('login-show');
-});
-
-
-$
-
-</script>
-
 </body>
 </html>
