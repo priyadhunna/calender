@@ -100,7 +100,7 @@ input[type="checkbox"] + label:after {
   top: 0.45em;
   left: 0.2em;
   font-size: 0.8em;
-  color: #fff;
+  color: #8d8d8d;
   opacity: 0;
   font-family: FontAwesome;
   content: "\f00c";
@@ -219,3 +219,8 @@ select option {
     padding-right: 0;
   }
  
+
+ .abc{
+
+  color: #8d8d8d;
+ }
