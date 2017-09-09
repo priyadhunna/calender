@@ -15,11 +15,8 @@ body {
   
   
 }
-
-
-
-
 .wrapper {
+  
   display: block;
   width: 70%;
   height: 200px;
@@ -27,11 +24,11 @@ body {
   border: 1px solid #ccc;
   zoom: 0.90;
   padding: 20px;
-
   margin: 15em 10em 10em 15em;
   background-color: rgba(111,111,111,0.5);
 
 }
+
 .wrapper input[type="text"] {
 
   height: 35px;
