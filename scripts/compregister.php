@@ -47,7 +47,7 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" id="txtEmail" class="form-control" name="email"  placeholder="Official Email Id"  onclick='Javascript:checkEmail();' required autofocus>
+        <input type="email" id="txtEmail" class="form-control" name="email"  placeholder="Official Email Id"  onclick='Javascript:checkEmail();' required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
         <div class="form-group has-feedback">
@@ -61,9 +61,12 @@
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
        <div class="form-group has-feedback">
-        <input type="number" class="form-control" id="Phone" name="Phone"  placeholder="Phone Number"  required>
+        <input type="text" class="form-control" name="phone" id="number" placeholder="Phone Number"  required>
         <span class="glyphicon glyphicon-phone form-control-feedback"></span>
       </div>
+      
+   
+ </script>
       <div id="error"></div>
       <div class="row">
         <div class="col-xs-12">
@@ -133,13 +136,18 @@
         this.CompanyName.focus();
         e.preventDefault(); // equivalent to return false
         return;
-      } 
-      
-     
+      }
+      re = /^\w+$/;
+      if(!re.test(this.CompanyName.value)) {
+        alert("Error: CompanyName must contain only letters, numbers and underscores!");
+        this.CompanyName.focus();
+        e.preventDefault();
+        return;
+      }
             var val = number.value
     
-      if (/^\d{10}$/.test(val)) {
-     // value is ok, use it
+if (/^\d{10}$/.test(val)) {
+    // value is ok, use it
 } else {
     
     alert("Error: Please check that you've number");
@@ -208,7 +216,8 @@
 
   }, false);
 
-
+</script>
+<script language="javascript">
 
 function checkEmail() {
 
@@ -217,6 +226,20 @@ function checkEmail() {
     
     }
     </script>
-   
+    <script type="text/javascript">
+    function checknumber(){
+      var val = number.value
+    
+if (/^\d{10}$/.test(val)) {
+    // value is ok, use it
+} else {
+    
+    alert("Error: Please check that you've number");
+        this.number.focus();
+        e.preventDefault();
+        return;
+}
+}
+    </script>
 </body>
 </html>
