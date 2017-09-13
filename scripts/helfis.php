@@ -1,8 +1,27 @@
+<?php require_once 'connection.php'; ?>
+<?php require_once 'library.php'; ?>
+ <?php require_once 'connection.php'; ?>
+ <?php
+              try{
+                     $db = $m->helfis;
+                     $collection = $db->company_user_registeration;
+                     $cursor = $collection->find(array("CompanyName"=>"group10"));
+                      // print_r($cursor);
+                       foreach($cursor as $key){
+ //echo  '<span class=\"atgmail\" style=\" position: absolute; padding-top: 9px; right: 10px;color: #999; \">'.$key["Domain"].'</span>';
+                                              }
+                   }
+
+    catch(MongoException $mongoException){
+        print $mongoException;
+        exit;
+    }
+    ?>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Create Event Page</title>
+  <title>helfis Registration Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -31,19 +50,36 @@
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">COMPANY REGISTRATION</p>
+    <p class="login-box-msg">HELFIS REGISTRATION</p>
     
     <form action="" method="post" id="myForm">
       <div class="form-group has-feedback">
-       <input id="field_CompanyName" title="CompanyName must not be blank and contain only letters, numbers and underscores." type="text" required pattern="\w+" name="CompanyName" class="form-control" placeholder="Company Name">
+       <input id="field_CompanyName" title="CompanyName must not be blank and contain only letters, numbers and underscores." type="text" required pattern="\w+" name="CompanyName" class="form-control" placeholder="Employee Name" >
+
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback">
-        <input type="email" id="txtEmail" class="form-control" name="email"  placeholder="Official Email Id"  onclick='Javascript:checkEmail();' required>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-        <div class="form-group has-feedback">
+      <!-- <div class="form-group has-feedback">
 
+        <input type="email" id="txtEmail" class="form-control" name="email"  placeholder="Official Email Id" onclick='Javascript:checkEmail();' required>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div> -->
+        <div class="form-group has-feedback">
+        <input style="width:320px;height:35px; border-color: #d2d6de; border-width:1px " type="email" id="txtEmail"  maxlength="30" autocomplete="off" name="email" placeholder=" &nbsp;&nbsp; Official Email id"  value= " " spellcheck="false"  aria-invalid="true" ><span class="atgmail" style="
+    position: absolute; padding-top: 9px; 
+ 
+    right: 10px;
+    color: #999;
+  
+">
+<?php
+echo '<span class=\"atgmail\" style=\" position: absolute; padding-top: 9px; right: 10px;color: #999; \">'.$key["Domain"].'</span>';
+?>
+
+
+</span>
+        </div>
+
+    <div class="form-group has-feedback">
  <input id="field_pass" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pass" placeholder="Password" class="form-control">
 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
