@@ -5,7 +5,7 @@
               try{
                      $db = $m->helfis;
                      $collection = $db->company_user_registeration;
-                     $cursor = $collection->find(array("CompanyName"=>"group10"));
+                     $cursor = $collection->find(array("DomainName"=>"intel"));
                       // print_r($cursor);
                        foreach($cursor as $key){
  //echo  '<span class=\"atgmail\" style=\" position: absolute; padding-top: 9px; right: 10px;color: #999; \">'.$key["Domain"].'</span>';
