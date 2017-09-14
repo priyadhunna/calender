@@ -326,14 +326,14 @@ require_once 'connection.php'; ?>
              <div class="tab-pane active" id="settings">
                 <form class="form-horizontal" method="POST" action="userprofile.php">
                   <div class="form-group">
-                    <label for="inputName" class="col-sm-2 control-label" >Name</label>
+                    <label for="inputName" class="col-sm-2 control-label" >FirstName</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputName" placeholder="Full Name" required>
+                      <input type="text" class="form-control" name="inputName" placeholder="FirstName" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-sm-2 control-label">Email Address</label>
 
                     <div class="col-sm-8">
                       <input type="email" class="form-control" name="inputEmail" placeholder="email" required >
@@ -364,36 +364,40 @@ require_once 'connection.php'; ?>
                     <div class="col-sm-2">
                       <input type="text" class="form-control" name="inputHeight" placeholder="Height" required>
                     </div>
-                     <label for="inputBMI" class="col-sm-1 control-label">BMI</label>
+                     <label for="inputMuscle" class="col-sm-2 control-label">Muscle</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" name="inputChild" placeholder="Muscle" required>
+                    </div>
+                    </div>
+                  <br><br>
+                  <div class="form-group">
+                    <label for="inputBMI" class="col-sm-2 control-label">BMI</label>
                     <div class="col-sm-2">
                       <input type="number" class="form-control" name="inputBMI" placeholder="BMI" required>
                     </div>
-                  </div>
-                  <br><br>
-                  <div class="form-group">
-                    <label for="inputMother" class="col-sm-2 control-label">Mother</label>
+                    <label for="inputBMR" class="col-sm-2 control-label">BMR</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputMother" placeholder="Name" required>
+                      <input type="text" class="form-control" name="inputMother" placeholder="BMR" required>
                     </div>
-                    <label for="inputFather" class="col-sm-2 control-label">Father</label>
-                    <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Name" required>
+                        <label for="inputVisceralfat" class="col-sm-2 control-label">Visceralfat</label>
+                   <div class="col-sm-2">
+                      <input type="text" class="form-control" name="inputFather" placeholder="Visceralfat" required>
                     </div>
-                  </div>
+                    </div>
 
                   <div class="form-group">
-                    <label for="inputStat" class="col-sm-2 control-label">Status</label>
-                      <div class="col-sm-3">
-                      <select class="form-control" name="inputGender" required>
-                        <option>Single</option>
-                        <option>Married</option>
-                      </select>
-                      </div>
-                   
-                    <label for="inputChild" class="col-sm-2 control-label">Children</label>
+                    <label for="inputBodywater" class="col-sm-2 control-label">Bodywater</label>
+                   <div class="col-sm-2">
+                      <input type="text" class="form-control" name="inputFather" placeholder="Bodywater" required>
+                    </div>
+                      <label for="inputBMI" class="col-sm-2 control-label">Bodyfay</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputChild" placeholder="Children" required>
+                      <input type="text" class="form-control" name="inputFather" placeholder="Bodyfat" required>
+                    </div>
+                    <label for="inputBonemass" class="col-sm-2 control-label">Bonemass</label>
+                     <div class="col-sm-2">
+                      <input type="text" class="form-control" name="inputFather" placeholder="Bonemass" required>
                     </div>
                   </div>
                   <div class="form-group">
