@@ -253,7 +253,8 @@ require_once 'connection.php'; ?>
           <div class="box box-primary">
             <div class="box-body box-profile">
 
-              <img class="profile-user-img img-responsive img-circle" id="clok" style="background-image: url('../dist/img/user2-160x160.jpg'); background-size: 100% 100%;height: 100px;">
+              <img class="profile-user-img img-responsive img-circle" id="clok"  style="background-image: url('../dist/img/user2-160x160.jpg'); background-size: 100% 100%;height: 300px; width:300px ">
+             
 
               <h3 class="profile-username text-center">
                  <span class="hidden-xs"> <?php 
@@ -262,9 +263,23 @@ require_once 'connection.php'; ?>
 
               ?> </span>
               </h3>
+              <script type="text/javascript">
+                
+function preview(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) { $('clok').attr('src', e.target.result);  }
+    reader.readAsDataURL(input.files[0]);     }   }
+
+$("#clok").change(function(){
+  $("#clok").css({top: 0, left: 0});
+    preview(this);
+    $("#clok").draggable({ containment: 'parent',scroll: false });
+});
+              </script>
 
 
-                            <!--<input type='file' id='getval' name="background-image" onchange="readURL(event)"/>-->
+          <input type='file' id='getval' name="background-image" onchange="readURL(event)"/>
 
               <br>
 
