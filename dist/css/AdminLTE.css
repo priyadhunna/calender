@@ -63,6 +63,15 @@ body {
   margin-left: 230px;
   z-index: 820;
 }
+.content {
+    min-height: 250px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 3a50px;
+}
 .layout-top-nav .content-wrapper,
 .layout-top-nav .right-side,
 .layout-top-nav .main-footer {
@@ -4957,11 +4966,67 @@ element.style {
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 *{font-family: 'Roboto', sans-serif;}
+body,html{
+  height:100%
+}
+body{
+  background:#232329;
+  margin:0
+}
+.wrap{
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+  overflow: hidden;
+}
+label[for=upload]{
+  display:inline-block;
+  border:3px solid #ccc;
+  color:#666;
+  font-weight:bold;
+  background:#eee;
+  padding:8px 15px;
+  border-radius:5px;
+  cursor:pointer
+}
+label[for=upload]:hover{
+  background:#ddd
+}
+label[for=upload] input{ display:none }
+.thumb{
+  
+  padding-right: 0px;
+ 
+  
+}
+img {
+    vertical-align: middle;
+    height: 300px;
+    width: 30px;
+    }
+.thumb:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width:96%;
+  height:96%;
+  border:3px dashed #eee;
+  z-index:9;
+  top:1%;
+  left:1%;
+  opacity:0;
+  transition:all 0.2s;
+  pointer-events:none
+}
+.thumb:hover::before{
+  opacity:0.6
+}
 .thumb img{
-  width:10%;
-  max-width:50px;
-  max-height:20px;
+  width:100%;
+  max-width:100px;
+  max-height:100px;
   transition:all 0.4s;
 }
+
 
 
