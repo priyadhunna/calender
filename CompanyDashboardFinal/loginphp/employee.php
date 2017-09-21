@@ -1,3 +1,6 @@
+<?php require_once 'connection.php'; ?>
+<?php require_once 'library.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,7 +54,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Shashwat Yadav</span>
+              <span class="hidden-xs">Priya Dhunna</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -59,7 +62,7 @@
                 <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Shashwat Yadav
+                Priya Dhunna
                   
                 </p>
               </li>
@@ -92,7 +95,7 @@
           <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Shashwat Ydav</p>
+          <p>Priya Dhunna</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>

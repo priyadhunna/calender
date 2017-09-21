@@ -3,8 +3,9 @@ require_once 'connection.php';
 require_once 'library.php';
 $db = $m->helfis;
 $collection = $db->Points;
+$session= getemail(session_id());
 $fname = getname(session_id());
-$array = array("Points"=> -1);
+$array = array("Total Classes"=> -1);
 $cursor = $collection->find();
 $cursor	=	$cursor->sort($array)->limit(3);
 ?>
@@ -35,7 +36,7 @@ foreach ($cursor as $key => $value) {
 			</td>
 
 			<td>
-				<?= $value['Points']*5;?>
+				<?= $value['Total Classes']*5;?>
 			</td>
 		</tr>
 <?php }
@@ -55,7 +56,7 @@ foreach ($cursor as  $value) {
 				</td>
 
 				<td>
-					<?= $value['Points']*5;?>
+					<?= $value['Total Classes']*5;?>
 				</td>
 			</tr>
 <?php }} ?>

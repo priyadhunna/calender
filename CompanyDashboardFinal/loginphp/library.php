@@ -12,10 +12,17 @@
         $collection->insert($document);
         return true;
     }
-    
+      
+
+
+      
+
+
+   
+
     function chkemail($email){
         global $collection;
-        $temp = $collection->findOne(array('Email Address'=> $email));
+        $temp = $collection->findOne(array('EmailAddress'=> $email));
         if(empty($temp)){
         return true;
         }
@@ -23,14 +30,26 @@
             return false;
         }
     }
+
+      function chkname($fname){
+        global $collection;
+        $temp = $collection->findOne(array('FirstName'=> $fname));
+        if(empty($temp)){
+        return true;
+        }
+        else{
+            return false;
+        }
+    }
+
     function setsession($email){
      
        
         
         $_SESSION["userLoggedIn"] = 1;
         global $collection;
-        $temp = $collection->findOne(array('Email Address'=> $email));
-        $_SESSION["uname"] = $temp["First Name"];
+        $temp = $collection->findOne(array('EmailAddress'=> $email));
+        $_SESSION["uname"] = $temp["FirstName"];
         $_SESSION["email"] = $email;
         return true;
         
@@ -52,5 +71,5 @@
         unset($_SESSION["email"]);
         return true;
     }
-
+   
 ?>
