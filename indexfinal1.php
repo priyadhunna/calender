@@ -288,7 +288,7 @@ require_once 'scripts/HealthQuotes.php';
               <?php 
 
                echo getData(session_id()); 
-f
+
               ?></span>
             </a>
             <ul class="dropdown-menu">
@@ -300,7 +300,7 @@ f
                 <big><?php 
 
               echo getData(session_id()); 
-f
+
               ?></big>
               </center></p>
                 
@@ -339,7 +339,7 @@ f
             <big><?php 
 
               echo getData(session_id()); 
-f
+
               ?></big>
                 
           <br>
@@ -1015,12 +1015,13 @@ Shahi Egg Curry.</b></pre><br><br>
                   <!-- /.description-block -->
                 </div>
                 <!-- /.col -->
-              </div>
+                </div>
+                </div>
+
                 <?php 
                 }?>
                   </div>
-          <!-- /.widget-user -->
-        </div>
+                  <!-- /.widget-user -->
                 <?php }
                 }
 

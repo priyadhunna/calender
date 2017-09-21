@@ -12,43 +12,44 @@ error_reporting(0);
   
    if(isset($_POST['profile'])){
        
-        $fname = $_POST['inputName'];
-        $email = $_POST['inputemail'];
+        $fname        = $_POST['inputName'];
+        $email        = $_POST['inputEmail'];
        
-        $age    = $_POST['inputAge'];
-        $gender = $_POST['inputGender'];
-        $weight = $_POST['inputWeight'];
-        $height = $_POST['inputHeight'];
-        $bmi    = $_POST['inputBMI'];
-        $mother = $_POST['inputMother'];
-        $father = $_POST['inputFather'];
-        $status = $_POST['inputStat'];
-        $child  = $_POST['inputChild'];
-         $temp  = $_POST['pass'];
-         $options = array('cost' => 10);
-        $pass = password_hash($temp, PASSWORD_BCRYPT, $options);
-      
+        $age          = $_POST['inputAge'];
+        $gender       = $_POST['inputGender'];
+        $weight       = $_POST['inputWeight'];
+        $height       = $_POST['inputHeight'];
+        $bmi          = $_POST['inputBMI'];
+        $bmr          = $_POST['inputBMR'];
+        $bodywater    = $_POST['inputBodywater'];
+        $bodyfat      = $_POST['inputBodyfat'];
+        $bonemass     = $_POST['inputBonemass'];
+        $muscle       = $_POST['inputMuscle'];
+        $visceralfat  = $_POST['inputVisceralfat'];
+        
         $arrays = array(
             
-            "First Name"    => $fname,
-            "Email"         => $email,
+            "FirstName"     => $fname,
+            "Email Address" => $email,
             
-            "Age"           => $age, 
+            "age"           => $age, 
             "Gender"        => $gender,
-            "Weight"        => $weight,       
-            "Height"        => $height,
-            "BMI"           => $bmi,
-            "Mother"        => $mother,
-            "Father"        => $father,
-            "Status"        => $status,
-            "Children"      => $child
+            "weight"        => $weight,       
+            "height"        => $height,
+            "bmi"           => $bmi,
+            "bmr"           => $bmr,
+            "bodywater"     => $bodywater,
+            "bodyfat"       => $bodyfat,
+            "bonemass"      => $bonemass,
+            "muscle"        => $muscle ,
+            "visceralfat"   => $visceralfat,
         );
         
       
 
          $db = $m->helfis;
                         //echo "Databse loginreg selected";
-                        $collection = $db->Profile; 
+                        $collection = $db->assessme; 
                         //echo "Collection userdata Selected Successfully";
                         $collection->insert($arrays);
                        // echo "Document inserted successfully";

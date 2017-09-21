@@ -1283,6 +1283,13 @@ a:focus {
   -moz-appearance: none;
   appearance: none;
 }
+.form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 20px;
+}
+
+}
 .form-group.has-success label {
   color: #00a65a;
 }

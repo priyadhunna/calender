@@ -8,6 +8,10 @@ require_once 'connection.php'; ?>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
   <title>User Profile</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -240,7 +244,7 @@ require_once 'connection.php'; ?>
     </section>
 
     <!-- Main content -->
-    <section class="content" style="margin-top:50px;margin-left:150px;zoom:0.89;width:110%">
+    <section class="content" style="margin-top:50px;margin-left:150px;zoom:0.95;width:105%">
         <div class="col-md-9">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
@@ -251,8 +255,9 @@ require_once 'connection.php'; ?>
                   <div class="col-sm-1">
              <div class="wrap">
    <div class="thumb"> <img id="img" src="../dist/img/user.jpg" style="
-    height: 150px;
-    width: 150px;
+    height: 300px;
+    width: 250px;
+    padding-top: 40px;
    
     " />
      </div>
@@ -261,7 +266,7 @@ require_once 'connection.php'; ?>
    <form action="">
     <label for="upload">
       <input type='file' id="upload" style="display: block;
-    margin-top: 10px;
+    margin-top: 10px;;
 "></label>
      
   </form></div><h3 class="profile-username text-center">
@@ -270,24 +275,24 @@ require_once 'connection.php'; ?>
               ?> </span>
 
               </h3>
-           <div class="tab-content" style="padding-left:280px; width: 1000px; ">
+
+           <div class="tab-content" style="padding-left:280px; width: 1000px; padding-top:30px;zoom:0.988;">
              <div class="tab-pane active" id="settings">
                 <form class="form-horizontal" method="POST" action="userprofile.php">
-                  <div class="form-group" >
+                 
+                  <div class="form-group" style="height:44px;">
                     <label for="inputName" class="col-sm-2 control-label" >FirstName</label>
-
                     <div class="col-sm-2" >
                       <input type="text" class="form-control" name="inputName" placeholder="FirstName" required>
                     </div>
                   </div>
-                  <div class="form-group" >
+                  <div class="form-group" style="height:44px;">
                     <label for="inputEmail" class="col-sm-2 control-label">Email Address</label>
-
                     <div class="col-sm-8">
                       <input type="email" class="form-control" name="inputEmail" placeholder="email" required >
                     </div>
                   </div>
-                  <div class="form-group" >
+                  <div class="form-group" style="height:44px;" >
                     <label for="inputAge" class="col-sm-2 control-label" >Age</label>
 
                     <div class="col-sm-2">
@@ -302,9 +307,8 @@ require_once 'connection.php'; ?>
                     </div>
                   </div>
                   <br><br>
-                    <div class="form-group">
+                    <div class="form-group" style="height:44px;">
                     <label for="inputWeight" class="col-sm-2 control-label">Weight</label>
-
                     <div class="col-sm-2">
                       <input type="text" class="form-control" name="inputWeight" placeholder="Weight" required>
                     </div>
@@ -314,11 +318,11 @@ require_once 'connection.php'; ?>
                     </div>
                      <label for="inputMuscle" class="col-sm-2 control-label">Muscle</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputChild" placeholder="Muscle" required>
+                      <input type="text" class="form-control" name="inputMuscle" placeholder="Muscle" required>
                     </div>
                     </div>
                   <br><br>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputBMI" class="col-sm-2 control-label">BMI</label>
                     <div class="col-sm-2">
                       <input type="number" class="form-control" name="inputBMI" placeholder="BMI" required>
@@ -326,29 +330,29 @@ require_once 'connection.php'; ?>
                     <label for="inputBMR" class="col-sm-2 control-label">BMR</label>
 
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputMother" placeholder="BMR" required>
+                      <input type="text" class="form-control" name="inputBMR" placeholder="BMR" required>
                     </div>
                         <label for="inputVisceralfat" class="col-sm-2 control-label">Visceralfat</label>
                    <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Visceralfat" required>
+                      <input type="text" class="form-control" name="inputVisceralfat" placeholder="Visceralfat" required>
                     </div>
                     </div>
 
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputBodywater" class="col-sm-2 control-label">Bodywater</label>
                    <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Bodywater" required>
+                      <input type="text" class="form-control" name="inputBodywater" placeholder="Bodywater" required>
                     </div>
-                      <label for="inputBMI" class="col-sm-2 control-label">Bodyfay</label>
+                      <label for="inputBodyfat" class="col-sm-2 control-label">Bodyfat</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Bodyfat" required>
+                      <input type="text" class="form-control" name="inputBodyfat" placeholder="Bodyfat" required>
                     </div>
                     <label for="inputBonemass" class="col-sm-2 control-label">Bonemass</label>
                      <div class="col-sm-2">
-                      <input type="text" class="form-control" name="inputFather" placeholder="Bonemass" required>
+                      <input type="text" class="form-control" name="inputBonemass" placeholder="Bonemass" required>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
@@ -357,7 +361,7 @@ require_once 'connection.php'; ?>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" onclick="mynotify()" class="btn btn-danger" name="profile">Save Changes</button>
                     </div>
@@ -369,14 +373,14 @@ require_once 'connection.php'; ?>
 
 <div class="tab-pane" id="accset">
                 <form class="form-horizontal" action="">
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
                     <div class="col-sm-10">
                       <input type="email" class="form-control" id="inputEmail" placeholder="email" >
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputPass" class="col-sm-2 control-label">Password</label>
 
                     <div class="col-sm-10">
@@ -384,21 +388,21 @@ require_once 'connection.php'; ?>
                     </div>
                   </div>
                   <br><br>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputNewpass" class="col-sm-2 control-label">New Password</label>
 
                     <div class="col-sm-10">
                       <input type="Password" class="form-control" id="inputNewpass" placeholder="New Password">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <label for="inputRenewpass" class="col-sm-2 control-label">Re-type New Password</label>
 
                     <div class="col-sm-10">
                       <input type="Password" class="form-control" id="inputRenewpass" placeholder="Re-type New Password">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
@@ -407,7 +411,7 @@ require_once 'connection.php'; ?>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group" style="height:44px;">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" class="btn btn-danger" name="save">Save Changes</button>
                     </div>
