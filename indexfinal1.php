@@ -1,5 +1,5 @@
 <?php
-require_once 'scripts/dp.php';
+//require_once 'scripts/dp.php';
 //require_once 'scripts/connection.php';
 require_once 'scripts/per.php';
 require_once 'scripts/fun.php';
@@ -676,7 +676,7 @@ require_once 'scripts/HealthQuotes.php';
             <div class="box-footer no-padding">
               <?php
                  echo $rewards;
-f
+
               ?>
             </div>
           </div>
@@ -1016,20 +1016,25 @@ Shahi Egg Curry.</b></pre><br><br>
                 </div>
                 <!-- /.col -->
                 </div>
-                </div>
+                
 
                 <?php 
                 }?>
                   </div>
+
                   <!-- /.widget-user -->
                 <?php }
                 }
+
 
               catch(MongoException $mongoException){
                   print $mongoException;
                   exit;
               }
               ?>
+             
+             
+
               
          <div class="row">
           <div class="col-md-12 col-md-12">
