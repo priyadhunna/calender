@@ -1030,8 +1030,8 @@ Shahi Egg Curry.</b></pre><br><br>
                   exit;
               }
               ?>
-              
-         <div class="row">
+ </section>
+ <div class="row">
           <div class="col-md-12 col-md-12">
            <div class="box box-info">
             <div class="box-header">
@@ -1057,9 +1057,6 @@ Shahi Egg Curry.</b></pre><br><br>
         </div>
         </div>
   </div>
-
-        <!-- /.col -->
- </section>
     <!-- /.content -->
   </div>  <!-- /.content-wrapper -->
   <footer class="main-footer">
