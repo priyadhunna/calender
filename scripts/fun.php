@@ -2,25 +2,7 @@
     header("Cache-Control: no-cache, must-revalidate, max-age=0");
     header("Pragma: no-cache");
     header("Expires: Fri, 4 Jun 2010 12:00:00 GMT");
-    // try{
-    // var $m;
-    // var $db;
-    // var $collection1;
-    // var $collection2;
-    //  $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
-
-    // echo "Connected";
-    //  //echo "Connection to database Successfull!";echo"<br />";
-
-    // $db = $m->helfis;
-    // //echo "Databse loginreg selected";
-    // $collection1 = $db->login;
-    // $collection2 = $db->helfis_user_profiles;
-    // //echo "Collection userdata Selected Successfully";
-    // }
-    // catch (Exception $e){
-    //     die("Error. Couldn't connect to the server. Please Check");
-    // }
+   
 
     $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
 
@@ -30,7 +12,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->helfis_user_profiles;
+    $collection2 = $db->user_registered;
 
      function getData($sessionn) {
 
@@ -42,7 +24,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->helfis_user_profiles;
+    $collection2 = $db->user_registered;
 
 
     //echo $collection2->findOne(array("Email" => getemail($session)))["First Name"];
@@ -58,7 +40,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->helfis_user_profiles;
+    $collection2 = $db->user_registered;
 
      function getpassword($sessionn) {
 
@@ -70,7 +52,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->helfis_user_profiles;
+    $collection2 = $db->user_registered;
 
 
     //echo $collection2->findOne(array("Email" => getemail($session)))["First Name"];
@@ -80,26 +62,6 @@
         echo $collection2->findOne(array("EmailAddress" => $email))["Password"];
        
      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      
     function getemail($session){
 
@@ -107,7 +69,7 @@
     $db = $m->helfis;
     //echo "Databse loginreg selected";
     $collection1 = $db->login;
-    $collection2 = $db->helfis_user_profiles;
+    $collection2 = $db->user_registered;
     
     
   // echo $collection1->findOne(array("SessionID" => $session))["Email"];
@@ -132,18 +94,9 @@ return $collection1->findOne(array("SessionID" => $session))["Email"];
     
      //echo "Connection to database Successfull!";echo"<br />";
 
-    $db = $m->helfis;
-    //echo "Databse loginreg selected";
-    $collection2 = $db->helfis_user_profiles;
-     $collection1 = $db->login;
-    $collection = $db->assessme;
-
-
-    //echo $collection2->findOne(array("Email" => getemail($session)))["First Name"];
-   
-       $fname = getemail($sessionn);  
-       //$em = strval($email);
-        //echo $collection2->findOne(array("EmailAddress" => $fname))["FirstName"];
+        $db = $m->helfis;
+        $collection2 = $db->user_registered; 
+        $fname = getemail($sessionn);  
         return $collection2->findOne(array("EmailAddress" => $fname))["FirstName"];
        
      }

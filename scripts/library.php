@@ -1,25 +1,31 @@
 <?php
- // $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
- // echo "Connected";
-    if(!isset($_SESSION)) {
-    session_start();
-    session_id();
-     }
-
 
        function register($document){
         global $collection;
         $collection->insert($document);
         return true;
     }
-      
 
 
-      
 
+    function event_data_store($event){
+        $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
+        $db = $m->helfis;
+        $collection = $db->bookingevents; 
+        $collection->insert($event);
+    }
 
-   
-
+    function show_events(){
+        $m = new MongoClient("mongodb://helfishelfishelfis:dadadadada@ds127962.mlab.com:27962/helfis");
+        $db = $m->helfis;
+        $collection = $db->bookingevents;
+        $cursor = $collection->find();
+        foreach ( $cursor as $id => $value )
+        {
+            echo "$id: ";
+            var_dump( $value );
+        }
+    }
     function chkemail($email){
         global $collection;
         $temp = $collection->findOne(array('EmailAddress'=> $email));
@@ -40,6 +46,9 @@
         else{
             return false;
         }
+    }
+    function get_role($role){
+        
     }
 
     function setsession($email){

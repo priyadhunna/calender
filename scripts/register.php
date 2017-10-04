@@ -24,7 +24,9 @@
   <link rel="icon" href="../dist/img/credit/favicon.png" type="image/png">
   <!-- iCheck -->
   <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+  <style type="text/css">
 
+  </style>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -61,6 +63,11 @@
       <div class="form-group has-feedback">
         <input type="password" class="form-control" name="cpass" onblur="chk()" placeholder="Retype password" required>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="radio" class="form-control" name="Role" value="2"> Admin Rights &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- see later -->
+
+        <input type="radio" class="form-control" name="Role" value="3"> Employer Rights
       </div>
       <div id="error"></div>
       <div class="row">

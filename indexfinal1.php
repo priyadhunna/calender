@@ -1,5 +1,5 @@
 <?php
-require_once 'scripts/dp.php';
+//require_once 'scripts/dp.php';
 //require_once 'scripts/connection.php';
 require_once 'scripts/per.php';
 require_once 'scripts/fun.php';
@@ -59,13 +59,8 @@ require_once 'scripts/HealthQuotes.php';
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
   <script src="jquery-2.1.4.min.js"></script>
-  <script>
-    jQuery(window).load(function(){
-        jQuery(".hameid-loader-overlay").fadeOut(500);
-    });
-</script>
+
 <script src="Chart.js"></script>
-  </head>
   <style>
   .hameid-loader-overlay {
     width: 100%;
@@ -75,8 +70,9 @@ require_once 'scripts/HealthQuotes.php';
     position: fixed;
 }
 </style>
+</head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="hameid-loader-overlay"></div>
+<!-- <div class="hameid-loader-overlay"></div> -->
 <div class="wrapper">
 
   <header class="main-header">
@@ -676,7 +672,7 @@ require_once 'scripts/HealthQuotes.php';
             <div class="box-footer no-padding">
               <?php
                  echo $rewards;
-f
+
               ?>
             </div>
           </div>
@@ -1016,14 +1012,16 @@ Shahi Egg Curry.</b></pre><br><br>
                 </div>
                 <!-- /.col -->
                 </div>
-                </div>
+                
 
                 <?php 
                 }?>
                   </div>
+
                   <!-- /.widget-user -->
                 <?php }
                 }
+
 
               catch(MongoException $mongoException){
                   print $mongoException;
@@ -1032,6 +1030,12 @@ Shahi Egg Curry.</b></pre><br><br>
               ?>
  </section>
  <div class="row">
+=======
+             
+             
+
+              
+         <div class="row">
           <div class="col-md-12 col-md-12">
            <div class="box box-info">
             <div class="box-header">

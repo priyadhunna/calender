@@ -244,22 +244,18 @@ require_once 'connection.php'; ?>
     </section>
 
     <!-- Main content -->
-    <section class="content" style="margin-top:50px;margin-left:150px;zoom:0.95;width:105%">
-        <div class="col-md-9">
+    <section class="content">
+    
+        <div class="col-sm-12">
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#settings" data-toggle="tab">Profile</a></li>
               <li><a href="#accset" data-toggle="tab">Account Settings</a></li>
               <!-- <li><a href="#settings" data-toggle="tab">Settings</a></li> -->
             </ul>
-                  <div class="col-sm-1">
+                <div class="col-sm-20">  <div class="col-sm-3" style="padding-top:5%; zoom:0.9;">
              <div class="wrap">
-   <div class="thumb"> <img id="img" src="../dist/img/user.jpg" style="
-    height: 300px;
-    width: 250px;
-    padding-top: 40px;
-   
-    " />
+   <div class="thumb"> <img id="img" src="../dist/img/user.jpg"  />
      </div>
      </div>
     <br><br>
@@ -269,30 +265,32 @@ require_once 'connection.php'; ?>
     margin-top: 10px;;
 "></label>
      
-  </form></div><h3 class="profile-username text-center">
+  </form>
+  </div><h3 class="profile-username text-center">
                  <span class="hidden-xs"> <?php 
               echo getData(session_id()); 
               ?> </span>
 
               </h3>
-
-           <div class="tab-content" style="padding-left:280px; width: 1000px; padding-top:30px;zoom:0.988;">
-             <div class="tab-pane active" id="settings">
-                <form class="form-horizontal" method="POST" action="userprofile.php">
-                 
-                  <div class="form-group" style="height:44px;">
+             
+           <div class="tab-content">
+           
+             <div class="tab-pane active" id="settings"><div class="col-sm-14">
+                <form class="form-horizontal" method="POST" action="userprofile.php" style="zoom:0.80; ">
+                  <div class="col-xs-9">
+                  <div class="form-group">
                     <label for="inputName" class="col-sm-2 control-label" >FirstName</label>
                     <div class="col-sm-2" >
                       <input type="text" class="form-control" name="inputName" placeholder="FirstName" required>
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputEmail" class="col-sm-2 control-label">Email Address</label>
                     <div class="col-sm-8">
                       <input type="email" class="form-control" name="inputEmail" placeholder="email" required >
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;" >
+                  <div class="form-group"  >
                     <label for="inputAge" class="col-sm-2 control-label" >Age</label>
 
                     <div class="col-sm-2">
@@ -307,7 +305,7 @@ require_once 'connection.php'; ?>
                     </div>
                   </div>
                   <br><br>
-                    <div class="form-group" style="height:44px;">
+                    <div class="form-group" >
                     <label for="inputWeight" class="col-sm-2 control-label">Weight</label>
                     <div class="col-sm-2">
                       <input type="text" class="form-control" name="inputWeight" placeholder="Weight" required>
@@ -322,7 +320,7 @@ require_once 'connection.php'; ?>
                     </div>
                     </div>
                   <br><br>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputBMI" class="col-sm-2 control-label">BMI</label>
                     <div class="col-sm-2">
                       <input type="number" class="form-control" name="inputBMI" placeholder="BMI" required>
@@ -338,7 +336,7 @@ require_once 'connection.php'; ?>
                     </div>
                     </div>
 
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputBodywater" class="col-sm-2 control-label">Bodywater</label>
                    <div class="col-sm-2">
                       <input type="text" class="form-control" name="inputBodywater" placeholder="Bodywater" required>
@@ -352,7 +350,7 @@ require_once 'connection.php'; ?>
                       <input type="text" class="form-control" name="inputBonemass" placeholder="Bonemass" required>
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <div class="col-sm-offset-2 col-sm-10">
                       <div class="checkbox">
                         <label>
@@ -361,49 +359,51 @@ require_once 'connection.php'; ?>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="submit" onclick="mynotify()" class="btn btn-danger" name="profile">Save Changes</button>
                     </div>
-                  </div>
+                  </div></div>
                 </form>
+              </div>
               </div>
               <!-- /.tab-pane -->
 
 
-<div class="tab-pane" id="accset">
-                <form class="form-horizontal" action="">
-                  <div class="form-group" style="height:44px;">
+<div class="tab-pane" id="accset"><div class="col-xs-6">
+                <form class="form-horizontal" action="" style="zoom:0.80;"><div class="col-sm-14">
+                <div class="col-xs-9">
+                  <div class="form-group" >
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-4">
                       <input type="email" class="form-control" id="inputEmail" placeholder="email" >
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputPass" class="col-sm-2 control-label">Password</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-4">
                       <input type="Password" class="form-control" id="inputPass" placeholder="Password">
                     </div>
                   </div>
                   <br><br>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputNewpass" class="col-sm-2 control-label">New Password</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-4">
                       <input type="Password" class="form-control" id="inputNewpass" placeholder="New Password">
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
+                  <div class="form-group" >
                     <label for="inputRenewpass" class="col-sm-2 control-label">Re-type New Password</label>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-4">
                       <input type="Password" class="form-control" id="inputRenewpass" placeholder="Re-type New Password">
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
-                    <div class="col-sm-offset-2 col-sm-10">
+                  <div class="form-group" >
+                    <div class="col-sm-offset-2 col-sm-4">
                       <div class="checkbox">
                         <label>
                           <input type="checkbox"> I agree to the <a href="#">Terms and Conditions</a>
@@ -411,15 +411,13 @@ require_once 'connection.php'; ?>
                       </div>
                     </div>
                   </div>
-                  <div class="form-group" style="height:44px;">
-                    <div class="col-sm-offset-2 col-sm-10">
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
                       <button type="submit" class="btn btn-danger" name="save">Save Changes</button>
                     </div>
-                  </div>
+                  </div></div>
                 </form> 
 
-
-              </div>
               <!-- /.tab-pane -->
 
               <!-- <div class="tab-pane" id="settings">
@@ -483,7 +481,7 @@ require_once 'connection.php'; ?>
         <!-- /.col -->
       </div>
       <!-- /.row -->
-
+ </div></div></div>
     </section>
     <!-- /.content -->
   </div>

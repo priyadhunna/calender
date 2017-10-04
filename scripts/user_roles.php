@@ -1,6 +1,6 @@
 <?php error_reporting(0);?>
 <?php require_once 'connection.php';?> 
-<?php require_once 'user_roles_data.php';?>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,15 +9,15 @@
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/184766/style.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="user_roles.css">
-<script src="jquery.js"></script>
-<script src="jquery-ui-1.9.2.custom.min.js"></script>
-<script src="jquery.nicescroll.js"></script>
-<script src="bootstrap.min.js"></script>
-<script src="jquery.dataTables.js "></script>
-<script src="DT_bootstrap.js "></script>
-<script src="jquery-migrate-1.2.1.min.js "></script>
-<script src="respond.min.js "></script>
-<script src="editable-table.js"></script>
+<script src="../dist/js/jquery.js"></script>
+<script src="../dist/js/..dist/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../dist/js/jquery.nicescroll.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<script src="../dist/js/jquery.dataTables.js "></script>
+<script src="../dist/js/DT_bootstrap.js "></script>
+<script src="../dist/js/jquery-migrate-1.2.1.min.js "></script>
+<script src="../dist/js/respond.min.js "></script>
+<script src="../dist/js/editable-table.js"></script>
 </head>
 <!--main content start-->
 <!-- page start-->
